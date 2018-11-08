@@ -1,14 +1,31 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import * as styles from './Index.module.scss';
+import styled, { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+
+html {
+  height: 200vh;
+  margin: 50px;
+}
+body {
+  background: #fefefe;
+  font-family: 'Cutive Mono', monospace;
+  border: 1px dashed red;
+  height: 100%;
+}
+`;
 
 interface IndexPageProps {
   data: {
-    site: {
-      siteMetadata: {
-        name: string;
-        tagline: string;
-      };
+    allContentfulName: {
+      edges: Array<{
+        node: {
+          firstName: string;
+          lastName: string;
+        };
+      }>;
     };
   };
 }
@@ -16,24 +33,66 @@ interface IndexPageProps {
 // MY FIRST GRAPHQL QUERY WOOHoo
 export const indexPageQuery = graphql`
   query IndexPageQuery {
-    site {
-      siteMetadata {
-        name
-        tagline
+    allContentfulName {
+      edges {
+        node {
+          firstName
+          lastName
+        }
       }
     }
   }
 `;
 
+// STYLING
+
+const Header = styled.div<{ borderColor: string }>`
+  border: 1px dashed ${props => props.borderColor};
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0 55px;
+`;
+
+const Name = styled.div`
+  color: #333;
+  font-size: 34px;
+  margin: 22px 0;
+`;
+
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
+  state = {
+    show: 'blue',
+  };
+  componentDidMount() {
+    window.addEventListener('scroll', event => {
+      let show;
+      if (window.scrollY < 50) {
+        console.log('LESS');
+        show = 'green';
+      } else {
+        console.log(window.scrollY);
+        show = 'blue';
+      }
+      this.setState({
+        show,
+      });
+    });
+  }
+
   public render() {
-    const { name, tagline } = this.props.data.site.siteMetadata;
+    const { firstName, lastName } = this.props.data.allContentfulName.edges[0].node;
 
     return (
-      <div className={styles.Container}>
-        <h1>{name}</h1>
-        <p>{tagline}</p>
-      </div>
+      <>
+        <GlobalStyle />
+        <Header borderColor={this.state.show}>
+          <Name>
+            {firstName} {lastName}
+          </Name>
+        </Header>
+      </>
     );
   }
 }
