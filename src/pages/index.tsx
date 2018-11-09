@@ -4,9 +4,9 @@ import { graphql } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
 
 // Local imports
-import About from './About';
-import Portfolio from './Portfolio';
-import Contact from './Contact';
+import About from './about';
+import Portfolio from './portfolio';
+import Contact from './contact';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
