@@ -1,12 +1,17 @@
+// Third-party imports
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
+
+// Local imports
+import { About } from './about';
+import { Portfolio } from './portfolio';
+import { Contact } from './contact';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
 
 html {
-  height: 200vh;
   margin: 50px;
 }
 body {
@@ -14,6 +19,7 @@ body {
   font-family: 'Cutive Mono', monospace;
   border: 1px dashed red;
   height: 100%;
+  margin-top: 40px;
 }
 `;
 
@@ -45,7 +51,6 @@ export const indexPageQuery = graphql`
 `;
 
 // STYLING
-
 const Header = styled.div<{ borderColor: string }>`
   border: 1px dashed ${props => props.borderColor};
   position: fixed;
@@ -69,10 +74,10 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
     window.addEventListener('scroll', event => {
       let show;
       if (window.scrollY < 50) {
-        console.log('LESS');
+        // console.log('LESS');
         show = 'green';
       } else {
-        console.log(window.scrollY);
+        // console.log(window.scrollY);
         show = 'blue';
       }
       this.setState({
@@ -92,6 +97,9 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
             {firstName} {lastName}
           </Name>
         </Header>
+        <About />
+        <Portfolio />
+        <Contact />
       </>
     );
   }
