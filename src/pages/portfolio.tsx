@@ -9,7 +9,7 @@ const PortfolioContainer = styled.div`
 `;
 
 // export const Portfolio = () => {
-export default class About extends React.Component<{}> {
+export default class Portfolio extends React.Component<{}> {
   public render() {
     return (
       <PortfolioContainer>

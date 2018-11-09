@@ -9,7 +9,7 @@ const ContactContainer = styled.div`
 `;
 
 // export const Contact = () => {
-export default class About extends React.Component<{}> {
+export default class Contact extends React.Component<{}> {
   public render() {
     return (
       <ContactContainer>

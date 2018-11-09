@@ -17,6 +17,7 @@ const Img = styled.img`
   object-fit: contain;
 `;
 
+// export const About = () => {
 export default class About extends React.Component<{}> {
   public render() {
     return (
