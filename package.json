@@ -11,17 +11,17 @@
   "dependencies": {
     "babel-plugin-styled-components": "^1.8.0",
     "dotenv": "^6.1.0",
-    "gatsby": "^2.0.0",
-    "gatsby-plugin-sass": "^2.0.0-rc.2",
+    "gatsby": "^2.0.44",
+    "gatsby-plugin-sass": "^2.0.4",
     "gatsby-plugin-styled-components": "^3.0.1",
-    "gatsby-plugin-typescript": "^2.0.0-rc.6",
-    "gatsby-source-contentful": "^2.0.10",
-    "node-sass": "^4.9.4",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
+    "gatsby-plugin-typescript": "^2.0.1",
+    "gatsby-source-contentful": "^2.0.13",
+    "node-sass": "^4.10.0",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
     "styled-components": "^4.0.3",
     "tslint": "^5.11.0",
-    "typescript": "^3.1.5"
+    "typescript": "^3.1.6"
   },
   "devDependencies": {
     "@types/styled-components": "^4.0.3"

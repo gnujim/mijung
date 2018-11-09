@@ -8,10 +8,13 @@ const ContactContainer = styled.div`
   border: 1px dashed cyan;
 `;
 
-export const Contact = () => {
-  return (
-    <ContactContainer>
-      <a href="mailto:mijung.m@gmail.com">email me</a>
-    </ContactContainer>
-  );
-};
+// export const Contact = () => {
+export default class About extends React.Component<{}> {
+  public render() {
+    return (
+      <ContactContainer>
+        <a href="mailto:mijung.m@gmail.com">email me</a>
+      </ContactContainer>
+    );
+  }
+}

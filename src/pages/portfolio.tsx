@@ -8,11 +8,14 @@ const PortfolioContainer = styled.div`
   border: 1px dashed violet;
 `;
 
-export const Portfolio = () => {
-  return (
-    <PortfolioContainer>
-      <h1>Portfolio</h1>
-      <div className="portfolio-carousel" />
-    </PortfolioContainer>
-  );
-};
+// export const Portfolio = () => {
+export default class About extends React.Component<{}> {
+  public render() {
+    return (
+      <PortfolioContainer>
+        <h1>Portfolio</h1>
+        <div className="portfolio-carousel" />
+      </PortfolioContainer>
+    );
+  }
+}
