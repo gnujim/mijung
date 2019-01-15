@@ -13,7 +13,9 @@ export default class Contact extends React.Component<{}> {
   public render() {
     return (
       <ContactContainer>
-        <a href="mailto:mijung.m@gmail.com">email me</a>
+        <a href="mailto:mijung.m@gmail.com">email</a>
+        <a href="tel:16046167795">phone</a>
+        <a href="" />
       </ContactContainer>
     );
   }

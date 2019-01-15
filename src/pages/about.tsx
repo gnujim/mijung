@@ -17,17 +17,22 @@ const Img = styled.img`
   object-fit: contain;
 `;
 
+const PirateText = styled.div`
+  color: rebeccapurple;
+  font-size: 20px;
+`;
+
 // export const About = () => {
 export default class About extends React.Component<{}> {
   public render() {
     return (
       <AboutContainer>
-        <div className="about-text">
+        <PirateText>
           Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable
           strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me
           timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy
           black spot yardarm spyglass sheet transom heave to.
-        </div>
+        </PirateText>
         <Img src={pic} />
       </AboutContainer>
     );

@@ -2,6 +2,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 // Local imports
 import About from './about';
@@ -62,8 +64,9 @@ const Header = styled.div<{ borderColor: string }>`
 
 const Name = styled.div`
   color: #333;
-  font-size: 34px;
+  font-size: 40px;
   margin: 22px 0;
+  font-weight: 600;
 `;
 
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
