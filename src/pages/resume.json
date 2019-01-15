@@ -1,0 +1,96 @@
+{
+  "basics": {
+    "name": "Mijung Lee",
+    "label": "Web Developer",
+    "email": "mijung.m@gmail.com",
+    "phone": "(604) 616-7795",
+    "location": "Vancouver, BC",
+    "github": "",
+    "linkedin": "",
+    "website": "https://mijung.io",
+    "summary": "As a junior front-end developer with a keen eye for detail, I am committed to crafting an intuitive user experience, with the use of practical, well-encapsulated code. I am self-motivated, adept at problem solving, and an eager learner."
+  },
+  "work": [
+    {
+      "company": "Pivot & Pilot",
+      "position": "Web Developer",
+      "website": "http://company.com",
+      "startDate": "2017-11",
+      "endDate": "2018-05",
+      "summary": "Description..."
+    },
+    {
+      "company": "Scotiabank",
+      "position": "Web Developer",
+      "website": "http://company.com",
+      "startDate": "2017-11",
+      "endDate": "2018-05",
+      "summary": "Description..."
+    },
+    {
+      "company": "Urban Outfitters",
+      "position": "Web Developer",
+      "website": "http://company.com",
+      "startDate": "2017-11",
+      "endDate": "2018-05",
+      "summary": "Description..."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Lighthouse Labs",
+      "area": "Web Development Bootcamp",
+      "studyType": "Diploma",
+      "startDate": "2011-01-01",
+      "endDate": "2013-01-01"
+    },
+    {
+      "institution": "Langara College",
+      "area": "",
+      "studyType": "Bachelor",
+      "startDate": "2011-01-01",
+      "endDate": "2013-01-01"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Developmental Milestones",
+
+      "releaseDate": "2014-10-01",
+      "website": "http://publication.com",
+      "summary": "Description..."
+    },
+    {
+      "name": "Maria DeCotiis",
+      "releaseDate": "2014-10-01",
+      "website": "http://publication.com",
+      "summary": "Description..."
+    },
+    {
+      "name": "",
+      "releaseDate": "2014-10-01",
+      "website": "http://publication.com",
+      "summary": "Description..."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Languages",
+      "skills": ""
+    },
+    {
+      "title": "Frameworks, Libraries & Environments",
+      "skills": ""
+    },
+    {
+      "title": "Databases",
+      "skills": ""
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference..."
+    }
+  ]
+}
