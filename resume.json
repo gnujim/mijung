@@ -5,8 +5,8 @@
     "email": "mijung.m@gmail.com",
     "phone": "(604) 616-7795",
     "location": "Vancouver, BC",
-    "github": "",
-    "linkedin": "",
+    "github": "https://github.com/gnujim/",
+    "linkedin": "https://linkedin.com/in/gnujim",
     "website": "https://mijung.io",
     "summary": "As a junior front-end developer with a keen eye for detail, I am committed to crafting an intuitive user experience, with the use of practical, well-encapsulated code. I am self-motivated, adept at problem solving, and an eager learner."
   },
@@ -14,25 +14,23 @@
     {
       "company": "Pivot & Pilot",
       "position": "Web Developer",
-      "website": "http://company.com",
+      "website": "https://pivotandpilot.com",
       "startDate": "2017-11",
       "endDate": "2018-05",
-      "summary": "Description..."
+      "summary": "In charge of developing highly customized sites that were user-friendly for both the clients and their customer base. Was responsible for researching and selecting tech-stack, and providing practical advice from a development standpoint. Worked closely with the design team to deliver unique and beautiful products."
     },
     {
       "company": "Scotiabank",
-      "position": "Web Developer",
-      "website": "http://company.com",
-      "startDate": "2017-11",
-      "endDate": "2018-05",
+      "position": "CSR",
+      "startDate": "2014-09",
+      "endDate": "2017-09",
       "summary": "Description..."
     },
     {
       "company": "Urban Outfitters",
-      "position": "Web Developer",
-      "website": "http://company.com",
-      "startDate": "2017-11",
-      "endDate": "2018-05",
+      "position": "Shipment Lead",
+      "startDate": "2007-12",
+      "endDate": "2014-03",
       "summary": "Description..."
     }
   ],
@@ -41,21 +39,18 @@
       "institution": "Lighthouse Labs",
       "area": "Web Development Bootcamp",
       "studyType": "Diploma",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01"
+      "date": "2017-10"
     },
     {
       "institution": "Langara College",
       "area": "",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01"
+      "studyType": "",
+      "date": "2017"
     }
   ],
   "projects": [
     {
       "name": "Developmental Milestones",
-
       "releaseDate": "2014-10-01",
       "website": "http://publication.com",
       "summary": "Description..."
@@ -76,7 +71,7 @@
   "skills": [
     {
       "title": "Languages",
-      "skills": ""
+      "skills": "Javascript | HTML | CSS | Ruby | Java"
     },
     {
       "title": "Frameworks, Libraries & Environments",
