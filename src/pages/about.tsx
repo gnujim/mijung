@@ -1,14 +1,11 @@
 // Third-party imports
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
-
-// Local imports
-import pic from '../../assets/badtaxidermy.jpg';
 
 const AboutContainer = styled.div`
   display: flex;
-  border: 1px dashed rebeccapurple;
+  border: 1px dashed #e3b5a5;
 `;
 
 const Img = styled.img`
@@ -18,23 +15,58 @@ const Img = styled.img`
 `;
 
 const PirateText = styled.div`
-  color: rebeccapurple;
+  color: #444444;
   font-size: 20px;
 `;
 
-// export const About = () => {
-export default class About extends React.Component<{}> {
-  public render() {
-    return (
-      <AboutContainer>
-        <PirateText>
-          Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable
-          strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me
-          timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy
-          black spot yardarm spyglass sheet transom heave to.
-        </PirateText>
-        <Img src={pic} />
-      </AboutContainer>
-    );
-  }
+interface AboutProps {
+  data: {
+    allContentfulAbout: {
+      edges: Array<{
+        node: {
+          aboutText: {
+            aboutText: string;
+          };
+          aboutPhoto: {
+            file: {
+              url: string;
+            };
+          };
+        };
+      }>;
+    };
+  };
 }
+
+export const About = ({ data }: AboutProps) => {
+  return (
+    <AboutContainer>
+      <PirateText>{data.allContentfulAbout.edges[0].node.aboutText.aboutText}</PirateText>
+      <Img src={data.allContentfulAbout.edges[0].node.aboutPhoto.file.url} />
+    </AboutContainer>
+  );
+};
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query AboutPageQuery {
+        allContentfulAbout {
+          edges {
+            node {
+              aboutText {
+                aboutText
+              }
+              aboutPhoto {
+                file {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => <About data={data} />}
+  />
+);

@@ -7,7 +7,8 @@ import Slider from 'react-slick';
 const PortfolioContainer = styled.div`
   /* display: flex; */
   /* flex-direction: column; */
-  border: 1px dashed violet;
+  border: 1px #e3b5a5;
+  margin: 50px 0;
 `;
 
 const PortfolioCarousel = styled.div`
@@ -51,22 +52,22 @@ export default class Portfolio extends React.Component<{}> {
         <PortfolioCarousel>
           <Slider {...settings}>
             <div>
-              <CarouselItem>1</CarouselItem>
+              <CarouselItem>Lindsay</CarouselItem>
             </div>
             <div>
-              <CarouselItem>2</CarouselItem>
+              <CarouselItem>Sucks</CarouselItem>
             </div>
             <div>
-              <CarouselItem>3</CarouselItem>
+              <CarouselItem>SHe</CarouselItem>
             </div>
             <div>
-              <CarouselItem>4</CarouselItem>
+              <CarouselItem>Likes</CarouselItem>
             </div>
             <div>
-              <CarouselItem>5</CarouselItem>
+              <CarouselItem>JohnCena</CarouselItem>
             </div>
             <div>
-              <CarouselItem>6</CarouselItem>
+              <CarouselItem>Lame</CarouselItem>
             </div>
           </Slider>
         </PortfolioCarousel>

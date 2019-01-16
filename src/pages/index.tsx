@@ -11,15 +11,16 @@ import Portfolio from './portfolio';
 import Contact from './contact';
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Crimson+Text|Work+Sans|Nanum+Gothic+Coding');
 
 html {
   margin: 50px;
 }
 body {
-  background: #fefefe;
-  font-family: 'Cutive Mono', monospace;
-  border: 1px dashed red;
+  /* background: #fefefe; */
+  background: #ededed;
+  font-family: 'Work Sans', sans-serif;
+  border: 1px dashed #e3b5a5;
   height: 100%;
   margin-top: 40px;
 }
@@ -39,7 +40,7 @@ interface IndexPageProps {
 }
 
 // MY FIRST GRAPHQL QUERY WOOHoo
-export const indexPageQuery = graphql`
+export const query = graphql`
   query IndexPageQuery {
     allContentfulName {
       edges {
@@ -60,13 +61,33 @@ const Header = styled.div<{ borderColor: string }>`
   right: 0;
   left: 0;
   padding: 0 55px;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const Name = styled.div`
+  font-family: 'Crimson Text', serif;
   color: #333;
   font-size: 40px;
   margin: 22px 0;
-  font-weight: 600;
+`;
+
+const Footer = styled.div`
+  width: 100%;
+  font-size: 12px;
+`;
+
+const FooterLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  border-bottom: 1px solid transparent;
+  &:visited {
+    color: inherit;
+  }
+  &:hover {
+    border-bottom: 1px solid #333;
+  }
 `;
 
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
@@ -99,10 +120,14 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
           <Name>
             {firstName} {lastName}
           </Name>
+          <Contact />
         </Header>
         <About />
         <Portfolio />
-        <Contact />
+        <Footer>
+          Icons made by <FooterLink href="https://freepik.com">Freepik</FooterLink> from{' '}
+          <FooterLink href="https://flaticon.com">www.flaticon.com</FooterLink>
+        </Footer>
       </>
     );
   }
