@@ -1,6 +1,5 @@
 // Third-party imports
 import React from 'react';
-import { graphql } from 'gatsby';
 import styled, { createGlobalStyle } from 'styled-components';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -8,8 +7,9 @@ import 'slick-carousel/slick/slick-theme.css';
 // Local imports
 import About from './about';
 import Portfolio from './portfolio';
-import Contact from './contact';
+import Header from './header';
 
+// Styled Components Global Styles
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Crimson+Text|Work+Sans|Nanum+Gothic+Coding');
 
@@ -26,51 +26,7 @@ body {
 }
 `;
 
-interface IndexPageProps {
-  data: {
-    allContentfulName: {
-      edges: Array<{
-        node: {
-          firstName: string;
-          lastName: string;
-        };
-      }>;
-    };
-  };
-}
-
-// MY FIRST GRAPHQL QUERY WOOHoo
-export const query = graphql`
-  query IndexPageQuery {
-    allContentfulName {
-      edges {
-        node {
-          firstName
-          lastName
-        }
-      }
-    }
-  }
-`;
-
-// STYLING
-const Header = styled.div<{ borderColor: string }>`
-  border: 1px dashed ${props => props.borderColor};
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  padding: 0 55px;
-  display: flex;
-  justify-content: space-between;
-`;
-
-const Name = styled.div`
-  font-family: 'Crimson Text', serif;
-  color: #333;
-  font-size: 40px;
-  margin: 22px 0;
-`;
+// Styled Components
 
 const Footer = styled.div`
   width: 100%;
@@ -90,45 +46,36 @@ const FooterLink = styled.a`
   }
 `;
 
-export default class IndexPage extends React.Component<IndexPageProps, {}> {
-  state = {
-    show: 'blue',
-  };
-  componentDidMount() {
-    window.addEventListener('scroll', event => {
-      let show;
-      if (window.scrollY < 50) {
-        // console.log('LESS');
-        show = 'green';
-      } else {
-        // console.log(window.scrollY);
-        show = 'blue';
-      }
-      this.setState({
-        show,
-      });
-    });
-  }
+export const Index = () => {
+  return (
+    <>
+      <GlobalStyle />
+      <Header />
+      <About />
+      <Portfolio />
+      <Footer>
+        Icons made by <FooterLink href="https://freepik.com">Freepik</FooterLink> from{' '}
+        <FooterLink href="https://flaticon.com">www.flaticon.com</FooterLink>
+      </Footer>
+    </>
+  );
+};
 
-  public render() {
-    const { firstName, lastName } = this.props.data.allContentfulName.edges[0].node;
-
-    return (
-      <>
-        <GlobalStyle />
-        <Header borderColor={this.state.show}>
-          <Name>
-            {firstName} {lastName}
-          </Name>
-          <Contact />
-        </Header>
-        <About />
-        <Portfolio />
-        <Footer>
-          Icons made by <FooterLink href="https://freepik.com">Freepik</FooterLink> from{' '}
-          <FooterLink href="https://flaticon.com">www.flaticon.com</FooterLink>
-        </Footer>
-      </>
-    );
-  }
-}
+// state = {
+//   show: 'blue',
+// };
+// componentDidMount() {
+//   window.addEventListener('scroll', event => {
+//     let show;
+//     if (window.scrollY < 50) {
+//       // console.log('LESS');
+//       show = 'green';
+//     } else {
+//       // console.log(window.scrollY);
+//       show = 'blue';
+//     }
+//     this.setState({
+//       show,
+//     });
+//   });
+// }
