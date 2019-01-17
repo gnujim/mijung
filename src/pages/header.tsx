@@ -2,28 +2,30 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 
-import Contact from './contact';
+import { Contact } from './contact';
 
 const HeaderContainer = styled.div`
+  align-items: center;
   border: 1px dashed black;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  padding: 0 55px;
   display: flex;
+  height: 100px;
   justify-content: space-between;
+  /* left: 0; */
+  /* padding: 0 55px; */
+  /* position: fixed; */
+  /* right: 0; */
+  /* top: 0; */
 `;
 
 const Name = styled.div`
-  font-family: 'Crimson Text', serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   color: #333;
-  font-size: 40px;
-  margin: 22px 0;
+  font-size: 60px;
+  font-weight: 100;
+  /* margin: 10px 0; */
 `;
 
-// Query Structure
-interface HeaderProps {
+interface HeaderQueryData {
   data: {
     allContentfulJsonResume: {
       edges: Array<{
@@ -39,19 +41,10 @@ interface HeaderProps {
   };
 }
 
-export const Header = ({ data }: HeaderProps) => {
-  return (
-    <HeaderContainer>
-      <Name>{data.allContentfulJsonResume.edges[0].node.jsonResume.basics.name}</Name>
-      <Contact />
-    </HeaderContainer>
-  );
-};
-
-export default () => (
+export const Header = () => (
   <StaticQuery
     query={graphql`
-      query HeaderQuery {
+      query HeaderQueryData {
         allContentfulJsonResume {
           edges {
             node {
@@ -65,6 +58,11 @@ export default () => (
         }
       }
     `}
-    render={data => <Header data={data} />}
+    render={data => (
+      <HeaderContainer>
+        <Name>{data.allContentfulJsonResume.edges[0].node.jsonResume.basics.name}</Name>
+        <Contact />
+      </HeaderContainer>
+    )}
   />
 );

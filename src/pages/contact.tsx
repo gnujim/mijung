@@ -11,61 +11,96 @@ import mailIcon from '../../assets/my-icons-collection/png/005-mail.png';
 
 const ContactContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   border: 1px dashed cyan;
+  width: 15%;
 `;
 
 const Icon = styled.img`
-  width: 50px;
+  opacity: 0.3;
+  width: 30px;
+  transition: opacity 0.3s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
 `;
 
-interface ContactProps {
+interface ContactQueryData {
   data: {
-    allContentfulInfo: {
+    allContentfulJsonResume: {
       edges: Array<{
         node: {
-          email: string;
-          github: string;
-          linkedIn: string;
+          jsonResume: {
+            basics: {
+              email: string;
+              phone: string;
+              github: string;
+              linkedin: string;
+              location: string;
+            };
+          };
         };
       }>;
     };
   };
 }
 
-export const Contact = ({ data }: ContactProps) => {
-  return (
-    <ContactContainer>
-      <a href={`mailto:${data.allContentfulInfo.edges[0].node.email}`}>
-        <Icon src={mailIcon} />
-      </a>
-      <a href="tel:16046167795">
-        <Icon src={phoneIcon} />
-      </a>
-      <a href={data.allContentfulInfo.edges[0].node.github}>
-        <Icon src={githubIcon} />
-      </a>
-      <a href={data.allContentfulInfo.edges[0].node.linkedIn}>
-        <Icon src={linkedinIcon} />
-      </a>
-    </ContactContainer>
-  );
-};
+// export const Contact = ({ data }: ContactProps) => {
+//   const contentful = data.allContentfulJsonResume.edges[0].node.jsonResume.basics;
+//   return (
+//     <ContactContainer>
+//       <a href={`mailto:${contentful.email}`}>
+//         <Icon src={mailIcon} />
+//       </a>
+//       <a href={`tel:${contentful.phone}`}>
+//         <Icon src={phoneIcon} />
+//       </a>
+//       <a href={contentful.github}>
+//         <Icon src={githubIcon} />
+//       </a>
+//       <a href={contentful.linkedin}>
+//         <Icon src={linkedinIcon} />
+//       </a>
+//     </ContactContainer>
+//   );
+// };
 
-export default () => (
+export const Contact = () => (
   <StaticQuery
     query={graphql`
-      query ContactPageQuery {
-        allContentfulInfo {
+      query ContactQueryData {
+        allContentfulJsonResume {
           edges {
             node {
-              email
-              github
-              linkedIn
+              jsonResume {
+                basics {
+                  email
+                  phone
+                  github
+                  linkedin
+                  location
+                }
+              }
             }
           }
         }
       }
     `}
-    render={data => <Contact data={data} />}
+    render={data => (
+      <ContactContainer>
+        <a href={`mailto:${data.allContentfulJsonResume.edges[0].node.jsonResume.basics.email}`}>
+          <Icon src={mailIcon} />
+        </a>
+        <a href={`tel:${data.allContentfulJsonResume.edges[0].node.jsonResume.basics.phone}`}>
+          <Icon src={phoneIcon} />
+        </a>
+        <a href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.github}>
+          <Icon src={githubIcon} />
+        </a>
+        <a href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.linkedin}>
+          <Icon src={linkedinIcon} />
+        </a>
+      </ContactContainer>
+    )}
   />
 );

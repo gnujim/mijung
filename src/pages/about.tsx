@@ -4,8 +4,9 @@ import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 
 const AboutContainer = styled.div`
-  display: flex;
+  /* background-color: #e3b5a5; */
   border: 1px dashed #e3b5a5;
+  display: flex;
 `;
 
 const Img = styled.img`
@@ -19,7 +20,7 @@ const PirateText = styled.div`
   font-size: 20px;
 `;
 
-interface AboutProps {
+interface AboutQueryData {
   data: {
     allContentfulAbout: {
       edges: Array<{
@@ -38,19 +39,19 @@ interface AboutProps {
   };
 }
 
-export const About = ({ data }: AboutProps) => {
-  return (
-    <AboutContainer>
-      <PirateText>{data.allContentfulAbout.edges[0].node.aboutText.aboutText}</PirateText>
-      <Img src={data.allContentfulAbout.edges[0].node.aboutPhoto.file.url} />
-    </AboutContainer>
-  );
-};
+// export const About = ({ data }: AboutProps) => {
+//   return (
+//     <AboutContainer>
+//       <PirateText>{data.allContentfulAbout.edges[0].node.aboutText.aboutText}</PirateText>
+//       <Img src={data.allContentfulAbout.edges[0].node.aboutPhoto.file.url} />
+//     </AboutContainer>
+//   );
+// };
 
-export default () => (
+export const About = () => (
   <StaticQuery
     query={graphql`
-      query AboutPageQuery {
+      query AboutQueryData {
         allContentfulAbout {
           edges {
             node {
@@ -67,6 +68,11 @@ export default () => (
         }
       }
     `}
-    render={data => <About data={data} />}
+    render={data => (
+      <AboutContainer>
+        <PirateText>{data.allContentfulAbout.edges[0].node.aboutText.aboutText}</PirateText>
+        <Img src={data.allContentfulAbout.edges[0].node.aboutPhoto.file.url} />
+      </AboutContainer>
+    )}
   />
 );
