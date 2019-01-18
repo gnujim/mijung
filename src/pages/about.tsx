@@ -7,17 +7,20 @@ const AboutContainer = styled.div`
   /* background-color: #e3b5a5; */
   border: 1px dashed #e3b5a5;
   display: flex;
+  justify-content: space-between;
+  margin: 10px 10%;
 `;
 
-const Img = styled.img`
+const AboutImg = styled.img`
+  height: 300px;
   max-width: 40vw;
-  height: auto;
   object-fit: contain;
 `;
 
-const PirateText = styled.div`
+const AboutText = styled.div`
   color: #444444;
   font-size: 20px;
+  width: 60%;
 `;
 
 interface AboutQueryData {
@@ -42,8 +45,8 @@ interface AboutQueryData {
 // export const About = ({ data }: AboutProps) => {
 //   return (
 //     <AboutContainer>
-//       <PirateText>{data.allContentfulAbout.edges[0].node.aboutText.aboutText}</PirateText>
-//       <Img src={data.allContentfulAbout.edges[0].node.aboutPhoto.file.url} />
+//       <AboutText>{data.allContentfulAbout.edges[0].node.aboutText.aboutText}</AboutText>
+//       <AboutImg src={data.allContentfulAbout.edges[0].node.aboutPhoto.file.url} />
 //     </AboutContainer>
 //   );
 // };
@@ -70,8 +73,8 @@ export const About = () => (
     `}
     render={data => (
       <AboutContainer>
-        <PirateText>{data.allContentfulAbout.edges[0].node.aboutText.aboutText}</PirateText>
-        <Img src={data.allContentfulAbout.edges[0].node.aboutPhoto.file.url} />
+        <AboutText>{data.allContentfulAbout.edges[0].node.aboutText.aboutText}</AboutText>
+        <AboutImg src={data.allContentfulAbout.edges[0].node.aboutPhoto.file.url} />
       </AboutContainer>
     )}
   />

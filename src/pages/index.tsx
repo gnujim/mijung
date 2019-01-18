@@ -20,7 +20,9 @@ html {
 body {
   /* background: #fefefe; */
   background: #ededed;
-  font-family: 'Scope One', serif;
+  /* font-family: 'Scope One', serif; */
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 100;
   border: 1px dashed #e3b5a5;
   height: 100%;
   /* letter-spacing: -1px; */
