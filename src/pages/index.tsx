@@ -5,10 +5,10 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 // Local imports
-import { About } from './about';
-import { Portfolio } from './portfolio';
-import { Header } from './header';
-import { Footer } from './footer';
+import { About } from '../components/about';
+import { Portfolio } from '../components/portfolio';
+import { Header } from '../components/header';
+import { Footer } from '../components/footer';
 
 // Styled Components Global Styles
 const GlobalStyle = createGlobalStyle`
