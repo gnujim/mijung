@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery, Link } from 'gatsby';
 import styled from 'styled-components';
 
 import { Contact } from './contact';
@@ -61,6 +61,7 @@ export const Header = () => (
     render={data => (
       <HeaderContainer>
         <Name>{data.allContentfulJsonResume.edges[0].node.jsonResume.basics.name}</Name>
+        <Link to="/resume/">Resume</Link>
         <Contact />
       </HeaderContainer>
     )}
