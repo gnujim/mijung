@@ -10,9 +10,9 @@ const PortfolioContainer = styled.div`
 `;
 
 const PortfolioTitle = styled.div`
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
   font-size: 40px;
-  font-weight: 100;
 `;
 
 const PortfolioGrid = styled.div`
@@ -35,6 +35,8 @@ const Project = styled.div`
 const ProjectLeft = styled.div``;
 
 const ProjectTitle = styled.div`
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-size: 36px;
 `;
 

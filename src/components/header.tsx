@@ -10,6 +10,9 @@ const HeaderContainer = styled.div`
   display: flex;
   height: 100px;
   justify-content: space-between;
+  font-family: 'Playfair Display', serif;
+
+  background-color: #fdfbf7;
   /* left: 0; */
   /* padding: 0 55px; */
   /* position: fixed; */
@@ -18,10 +21,11 @@ const HeaderContainer = styled.div`
 `;
 
 const Name = styled.div`
-  font-family: 'IBM Plex Sans', sans-serif;
+  /* font-family: 'IBM Plex Sans', sans-serif; */
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
   color: #333;
-  font-size: 60px;
-  font-weight: 100;
+  font-size: 55px;
   /* margin: 10px 0; */
 `;
 

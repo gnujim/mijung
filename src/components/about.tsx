@@ -4,7 +4,6 @@ import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 
 const AboutContainer = styled.div`
-  /* background-color: #e3b5a5; */
   border: 1px dashed #e3b5a5;
   display: flex;
   justify-content: space-between;

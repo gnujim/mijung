@@ -12,17 +12,16 @@ import { Footer } from '../components/footer';
 
 // Styled Components Global Styles
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Scope+One|Work+Sans|Nanum+Gothic+Coding|Alike+Angular|IBM+Plex+Sans:100,400|Karma');
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Scope+One|Work+Sans|IBM+Plex+Sans:100,400|Karma|Libre+Baskerville:700|Playfair+Display:400,700|');
 
 html {
   margin: 0 50px 50px 50px;
 }
 body {
-  /* background: #fefefe; */
-  background: #ededed;
-  /* font-family: 'Scope One', serif; */
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-weight: 100;
+  /* background: #ededed; */
+  font-family: 'Cutive Mono', monospace;
+  /* font-family: 'IBM Plex Sans', sans-serif; */
+  /* font-weight: 100; */
   border: 1px dashed #e3b5a5;
   height: 100%;
   /* letter-spacing: -1px; */
