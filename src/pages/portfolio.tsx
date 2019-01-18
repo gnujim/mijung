@@ -15,6 +15,12 @@ const PortfolioTitle = styled.div`
   font-weight: 100;
 `;
 
+const PortfolioGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+`;
+
 const PortfolioCarousel = styled.div`
   font-size: 14px;
   /* background-color: black; */
@@ -24,9 +30,6 @@ const PortfolioCarousel = styled.div`
 const Project = styled.div`
   border: 1px dashed pink;
   background-color: #fefefe;
-  display: flex !important;
-  flex-direction: row;
-  justify-content: space-between;
 `;
 
 const ProjectLeft = styled.div``;
@@ -111,7 +114,7 @@ export const Portfolio = () => (
     render={data => (
       <PortfolioContainer>
         <PortfolioTitle>Portfolio</PortfolioTitle>
-        <PortfolioCarousel>
+        {/* <PortfolioCarousel>
           <Slider {...settings}>
             {data.allContentfulJsonResume.edges[0].node.jsonResume.projects.map(project => {
               return (
@@ -127,7 +130,20 @@ export const Portfolio = () => (
               );
             })}
           </Slider>
-        </PortfolioCarousel>
+        </PortfolioCarousel> */}
+        <PortfolioGrid>
+          {data.allContentfulJsonResume.edges[0].node.jsonResume.projects.map(project => {
+            return (
+              <Project key={project.name}>
+                <ProjectTitle>{project.name}</ProjectTitle>
+                <ProjectLink href={project.website}>{project.website}</ProjectLink>
+                <ProjectDate>{project.releaseDate}</ProjectDate>
+                {/* <ProjectDescription>{project.summary}</ProjectDescription> */}
+                <ProjectImg src="https://picsum.photos/400/300/?random" />
+              </Project>
+            );
+          })}
+        </PortfolioGrid>
       </PortfolioContainer>
     )}
   />
