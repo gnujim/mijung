@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Scope+One|Work+Sans|IBM+Plex+Sans:100,400|Karma|Libre+Baskerville:700|Playfair+Display:400,700|');
 
 html {
-  margin: 0 50px 50px 50px;
+  /* margin: 0 50px 50px 50px; */
 }
 body {
   /* background: #ededed; */
@@ -23,7 +23,9 @@ body {
   /* font-family: 'IBM Plex Sans', sans-serif; */
   /* font-weight: 100; */
   border: 1px dashed #e3b5a5;
-  height: 100%;
+  margin: 10px 20px 30px 20px;
+  /* height: 100%; */
+  /* margin: 20px 50px 50px 50px; */
   /* letter-spacing: -1px; */
   /* margin-top: 50px; */
 }

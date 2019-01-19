@@ -4,21 +4,28 @@ import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Slider from 'react-slick';
 
+import linkIcon from '../../assets/my-icons-collection/png/unlink.png';
+
 const PortfolioContainer = styled.div`
-  border: 1px #e3b5a5;
-  margin: 50px 0;
+  /* border: 1px #e3b5a5; */
+  background-color: #fdfbf7;
+
+  border: 1px dashed black;
+  padding: 30px 50px;
 `;
 
 const PortfolioTitle = styled.div`
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 46px;
+  margin-bottom: 15px;
 `;
 
 const PortfolioGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-column-gap: 5px;
+  grid-row-gap: 15px;
 `;
 
 const PortfolioCarousel = styled.div`
@@ -29,7 +36,36 @@ const PortfolioCarousel = styled.div`
 
 const Project = styled.div`
   border: 1px dashed pink;
-  background-color: #fefefe;
+  position: relative;
+  /* background-color: #fefefe; */
+`;
+
+const ProjectOverlay = styled.div`
+  /* background-color: #444444; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* height: 90%; */
+  /* justify-content: center; */
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  /* display: none; */
+  background-color: #444;
+  &:hover {
+    /* display: block; */
+    opacity: 0.3;
+  }
+`;
+
+const ProjectText = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  right: 10px;
 `;
 
 const ProjectLeft = styled.div``;
@@ -37,7 +73,7 @@ const ProjectLeft = styled.div``;
 const ProjectTitle = styled.div`
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 32px;
 `;
 
 const ProjectDescription = styled.div`
@@ -45,7 +81,13 @@ const ProjectDescription = styled.div`
 `;
 
 const ProjectLink = styled.a`
-  color: #444;
+  color: black;
+  text-decoration: none;
+  &:visited {
+    color: black;
+  }
+  &:hover {
+  }
 `;
 
 const ProjectDate = styled.div`
@@ -53,8 +95,8 @@ const ProjectDate = styled.div`
 `;
 
 const ProjectImg = styled.img`
-  /* width: 300px; */
-  height: auto;
+  width: auto;
+  height: 100%;
 `;
 
 const SliderArrow = styled.div`
@@ -137,11 +179,16 @@ export const Portfolio = () => (
           {data.allContentfulJsonResume.edges[0].node.jsonResume.projects.map(project => {
             return (
               <Project key={project.name}>
-                <ProjectTitle>{project.name}</ProjectTitle>
-                <ProjectLink href={project.website}>{project.website}</ProjectLink>
-                <ProjectDate>{project.releaseDate}</ProjectDate>
                 {/* <ProjectDescription>{project.summary}</ProjectDescription> */}
                 <ProjectImg src="https://picsum.photos/400/300/?random" />
+                <ProjectOverlay />
+                <ProjectText>
+                  {' '}
+                  <ProjectLink href={project.website}>
+                    <ProjectTitle>{project.name} </ProjectTitle>
+                  </ProjectLink>
+                  <ProjectDate>{project.releaseDate}</ProjectDate>
+                </ProjectText>
               </Project>
             );
           })}

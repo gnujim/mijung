@@ -6,13 +6,13 @@ import { Contact } from './contact';
 
 const HeaderContainer = styled.div`
   align-items: center;
+  background-color: #fdfbf7;
   border: 1px dashed black;
   display: flex;
+  font-family: 'Playfair Display', serif;
   height: 100px;
   justify-content: space-between;
-  font-family: 'Playfair Display', serif;
-
-  background-color: #fdfbf7;
+  padding: 0 50px;
   /* left: 0; */
   /* padding: 0 55px; */
   /* position: fixed; */
