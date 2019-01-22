@@ -11,7 +11,9 @@ const AboutContainer = styled.div`
 `;
 
 const AboutImg = styled.img`
-  /* height: 300px; */
+  height: 400px;
+  width: 500px;
+  /* height: auto; */
   max-width: 40vw;
   object-fit: contain;
 `;
@@ -73,8 +75,8 @@ export const About = () => (
     render={data => (
       <AboutContainer>
         <AboutText>{data.allContentfulAbout.edges[0].node.aboutText.aboutText}</AboutText>
-        {/* <AboutImg src={data.allContentfulAbout.edges[0].node.aboutPhoto.file.url} /> */}
-        <AboutImg src="https://picsum.photos/500/400/?random" />
+        <AboutImg src={data.allContentfulAbout.edges[0].node.aboutPhoto.file.url} />
+        {/* <AboutImg src="https://picsum.photos/500/400/?random" /> */}
       </AboutContainer>
     )}
   />
