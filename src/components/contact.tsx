@@ -88,17 +88,14 @@ export const Contact = () => (
     `}
     render={data => (
       <ContactContainer>
-        <a href={`mailto:${data.allContentfulJsonResume.edges[0].node.jsonResume.basics.email}`}>
-          <Icon src={mailIcon} />
-        </a>
-        <a href={`tel:${data.allContentfulJsonResume.edges[0].node.jsonResume.basics.phone}`}>
-          <Icon src={phoneIcon} />
-        </a>
         <a href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.github}>
           <Icon src={githubIcon} />
         </a>
         <a href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.linkedin}>
           <Icon src={linkedinIcon} />
+        </a>
+        <a href={`mailto:${data.allContentfulJsonResume.edges[0].node.jsonResume.basics.email}`}>
+          <Icon src={mailIcon} />
         </a>
       </ContactContainer>
     )}

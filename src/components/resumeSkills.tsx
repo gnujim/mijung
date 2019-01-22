@@ -4,6 +4,14 @@ import styled from 'styled-components';
 
 const ResumeSkillsContainer = styled.div``;
 
+const SkillsTitle = styled.div`
+  font-weight: 600;
+  font-size: 20px;
+  font-style: italic;
+`;
+
+const SkillsList = styled.div``;
+
 interface ResumeSkillsQueryData {
   data: {
     allContentfulJsonResume: {
@@ -41,8 +49,14 @@ export const ResumeSkills = () => (
     `}
     render={data => (
       <ResumeSkillsContainer>
-        <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.skills[0].title}</div>
-        <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.skills[0].skills}</div>
+        {data.allContentfulJsonResume.edges[0].node.jsonResume.skills.map(category => {
+          return (
+            <>
+              <SkillsTitle>{category.title}</SkillsTitle>
+              <SkillsList>{category.skills}</SkillsList>
+            </>
+          );
+        })}
       </ResumeSkillsContainer>
     )}
   />

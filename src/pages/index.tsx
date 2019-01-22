@@ -11,7 +11,7 @@ import { Header } from '../components/header';
 import { Footer } from '../components/footer';
 
 // Styled Components Global Styles
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Scope+One|Work+Sans|IBM+Plex+Sans:100,400|Karma|Libre+Baskerville:700|Playfair+Display:400,700|');
 
 html {

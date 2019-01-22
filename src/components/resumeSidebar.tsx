@@ -2,7 +2,37 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 
-const ResumeSidebarContainer = styled.div``;
+const ResumeSidebarContainer = styled.div`
+  background-color: #fdfbf7;
+  border: 1px dashed #e3b5a5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 10px;
+`;
+
+const ResumeSidebarTop = styled.section``;
+
+const ResumeName = styled.div`
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #313131;
+  font-size: 55px;
+`;
+
+const ResumeBio = styled.div``;
+
+const ResumeSidebarBottom = styled.section`
+  display: flex;
+  flex-direction: column;
+`;
+
+const ResumeLink = styled.a`
+  color: #444;
+  text-decoration: none;
+`;
+
+const ResumeIcon = styled.img``;
 
 interface ResumeSidebarQueryData {
   data: {
@@ -12,6 +42,7 @@ interface ResumeSidebarQueryData {
           jsonResume: {
             basics: {
               name: string;
+              email: string;
               phone: string;
               github: string;
               linkedin: string;
@@ -43,6 +74,7 @@ export const ResumeSidebar = () => (
               jsonResume {
                 basics {
                   name
+                  email
                   phone
                   github
                   linkedin
@@ -65,14 +97,40 @@ export const ResumeSidebar = () => (
     `}
     render={data => (
       <ResumeSidebarContainer>
-        <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.basics.name}</div>
-        <div>{data.allContentfulAbout.edges[0].node.aboutText.aboutText}</div>
-        <div>
-          <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.basics.phone}</div>
-          <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.basics.github}</div>
-          <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.basics.linkedin}</div>
+        <ResumeSidebarTop>
+          <ResumeName>
+            {data.allContentfulJsonResume.edges[0].node.jsonResume.basics.name}
+          </ResumeName>
+          <ResumeBio>{data.allContentfulAbout.edges[0].node.aboutText.aboutText}</ResumeBio>
+        </ResumeSidebarTop>
+        <ResumeSidebarBottom>
           <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.basics.location}</div>
-        </div>
+          <ResumeLink
+            href={`tel:${data.allContentfulJsonResume.edges[0].node.jsonResume.basics.phone}`}
+          >
+            phone
+          </ResumeLink>
+          <ResumeLink
+            href={`mailto:${data.allContentfulJsonResume.edges[0].node.jsonResume.basics.email}`}
+          >
+            email
+          </ResumeLink>
+          <ResumeLink
+            href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.github}
+            target="_blank"
+          >
+            github
+          </ResumeLink>
+          <ResumeLink
+            href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.linkedin}
+            target="_blank"
+          >
+            linkedin
+          </ResumeLink>
+          <ResumeLink href="#" target="_blank">
+            angel.co?
+          </ResumeLink>
+        </ResumeSidebarBottom>
       </ResumeSidebarContainer>
     )}
   />
