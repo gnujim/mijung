@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 
 html {
   /* margin: 0 50px 50px 50px; */
+  background: #fdfbf7;
 }
 body {
   font-family: 'Cutive Mono', monospace;
