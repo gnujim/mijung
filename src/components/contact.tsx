@@ -125,11 +125,17 @@ export const Contact = () => (
           Resume
         </ResumeLink>
 
-        <ContactLink href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.linkedin}>
+        <ContactLink
+          href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.linkedin}
+          target="_blank"
+        >
           <Icon src={linkedinIcon} />
           LinkedIn
         </ContactLink>
-        <ContactLink href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.github}>
+        <ContactLink
+          href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.github}
+          target="_blank"
+        >
           <Icon src={githubIcon} />
           Github
         </ContactLink>
