@@ -1,61 +1,30 @@
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
+
+import { ResumeWork } from '../resume';
 
 const ResumeEmploymentContainer = styled.div``;
 
-interface ResumeEmploymentQueryData {
-  data: {
-    allContentfulJsonResume: {
-      edges: Array<{
-        node: {
-          jsonResume: {
-            work: Array<{
-              company: string;
-              summary: string;
-              position: string;
-              website: string;
-              startDate: string;
-              endDate: string;
-            }>;
-          };
-        };
-      }>;
-    };
-  };
+interface ResumeEmploymentProps {
+  work: Array<ResumeWork>;
 }
 
-export const ResumeEmployment = () => (
-  <StaticQuery
-    query={graphql`
-      query ResumeEmploymentQueryData {
-        allContentfulJsonResume {
-          edges {
-            node {
-              jsonResume {
-                work {
-                  company
-                  summary
-                  position
-                  website
-                  startDate
-                  endDate
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <ResumeEmploymentContainer>
-        <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.work[0].company}</div>
-        <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.work[0].summary}</div>
-        <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.work[0].position}</div>
-        <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.work[0].website}</div>
-        <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.work[0].startDate}</div>
-        <div>{data.allContentfulJsonResume.edges[0].node.jsonResume.work[0].endDate}</div>
-      </ResumeEmploymentContainer>
-    )}
-  />
-);
+export const ResumeEmployment = (props: ResumeEmploymentProps) => {
+  const { work } = props;
+  return (
+    <ResumeEmploymentContainer>
+      {work.map((workplace, index) => {
+        return (
+          <div key={index}>
+            <div>{workplace.company}</div>
+            <div>{workplace.summary}</div>
+            <div>{workplace.position}</div>
+            <div>{workplace.website}</div>
+            <div>{workplace.startDate}</div>
+            <div>{workplace.endDate}</div>
+          </div>
+        );
+      })}
+    </ResumeEmploymentContainer>
+  );
+};

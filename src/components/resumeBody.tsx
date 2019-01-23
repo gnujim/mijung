@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { Resume } from '../resume';
 import { ResumeSkills } from '../components/resumeSkills';
 import { ResumeProjects } from '../components/resumeProjects';
 import { ResumeEducation } from '../components/resumeEducation';
@@ -16,17 +17,23 @@ const ResumeSectionTitle = styled.div`
   margin-bottom: 15px;
 `;
 
-export const ResumeBody = () => {
+interface ResumeBodyProps {
+  resume: Resume;
+}
+
+export const ResumeBody = (props: ResumeBodyProps) => {
+  const { resume } = props;
+  const { skills, projects, education, work } = resume;
   return (
     <ResumeBodyContainer>
       <ResumeSectionTitle>Skills</ResumeSectionTitle>
-      <ResumeSkills />
+      <ResumeSkills skills={skills} />
       <ResumeSectionTitle>Projects</ResumeSectionTitle>
-      <ResumeProjects />
+      <ResumeProjects projects={projects} />
       <ResumeSectionTitle>Education</ResumeSectionTitle>
-      <ResumeEducation />
+      <ResumeEducation education={education} />
       <ResumeSectionTitle>Employment</ResumeSectionTitle>
-      <ResumeEmployment />
+      <ResumeEmployment work={work} />
     </ResumeBodyContainer>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
+
+import { ResumeSkill } from '../resume';
 
 const ResumeSkillsContainer = styled.div``;
 
@@ -12,52 +13,22 @@ const SkillsTitle = styled.div`
 
 const SkillsList = styled.div``;
 
-interface ResumeSkillsQueryData {
-  data: {
-    allContentfulJsonResume: {
-      edges: Array<{
-        node: {
-          jsonResume: {
-            skills: Array<{
-              title: string;
-              skills: string;
-            }>;
-          };
-        };
-      }>;
-    };
-  };
+interface ResumeSkillsProps {
+  skills: Array<ResumeSkill>;
 }
 
-export const ResumeSkills = () => (
-  <StaticQuery
-    query={graphql`
-      query ResumeSkillsQueryData {
-        allContentfulJsonResume {
-          edges {
-            node {
-              jsonResume {
-                skills {
-                  title
-                  skills
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <ResumeSkillsContainer>
-        {data.allContentfulJsonResume.edges[0].node.jsonResume.skills.map(category => {
-          return (
-            <>
-              <SkillsTitle>{category.title}</SkillsTitle>
-              <SkillsList>{category.skills}</SkillsList>
-            </>
-          );
-        })}
-      </ResumeSkillsContainer>
-    )}
-  />
-);
+export const ResumeSkills = (props: ResumeSkillsProps) => {
+  const { skills } = props;
+  return (
+    <ResumeSkillsContainer>
+      {skills.map((category, index) => {
+        return (
+          <div key={index}>
+            <SkillsTitle>{category.title}</SkillsTitle>
+            <SkillsList>{category.skills}</SkillsList>
+          </div>
+        );
+      })}
+    </ResumeSkillsContainer>
+  );
+};
