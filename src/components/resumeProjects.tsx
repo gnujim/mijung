@@ -5,6 +5,12 @@ import { ResumeProject } from '../resume';
 
 const ResumeProjectsContainer = styled.div``;
 
+const ProjectName = styled.div`
+  font-weight: 600;
+  font-size: 20px;
+  font-style: italic;
+`;
+
 interface ResumeProjectsProps {
   projects: Array<ResumeProject>;
 }
@@ -16,7 +22,7 @@ export const ResumeProjects = (props: ResumeProjectsProps) => {
       {projects.map((project, index) => {
         return (
           <div key={index}>
-            <div>{project.name}</div>
+            <ProjectName>{project.name}</ProjectName>
             <div>{project.summary}</div>
             <div>{project.website}</div>
             <div>{project.releaseDate}</div>

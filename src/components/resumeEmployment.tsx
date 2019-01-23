@@ -5,6 +5,12 @@ import { ResumeWork } from '../resume';
 
 const ResumeEmploymentContainer = styled.div``;
 
+const CompanyName = styled.div`
+  font-weight: 600;
+  font-size: 20px;
+  font-style: italic;
+`;
+
 interface ResumeEmploymentProps {
   work: Array<ResumeWork>;
 }
@@ -16,7 +22,7 @@ export const ResumeEmployment = (props: ResumeEmploymentProps) => {
       {work.map((workplace, index) => {
         return (
           <div key={index}>
-            <div>{workplace.company}</div>
+            <CompanyName>{workplace.company}</CompanyName>
             <div>{workplace.summary}</div>
             <div>{workplace.position}</div>
             <div>{workplace.website}</div>
