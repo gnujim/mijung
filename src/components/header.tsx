@@ -9,19 +9,32 @@ const HeaderContainer = styled.div`
   border: 1px dashed #e3b5a5;
   box-shadow: 8px 8px #e3b5a5c7;
   /* font-family: 'Playfair Display', serif; */
-  height: 100px;
-  padding: 0 50px;
+  /* height: 100px; */
+  padding: 0 10px;
   display: flex;
-  align-items: center;
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+    align-items: center;
+    padding: 0 50px;
+    height: 100px;
+  }
 `;
 
 const HeaderContent = styled.div`
   /* border: 1px solid black; */
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: baseline;
   width: 100%;
   padding-bottom: 7px;
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+    align-items: center;
+    flex-direction: row;
+  }
 `;
 
 const Name = styled.div`

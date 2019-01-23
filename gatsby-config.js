@@ -2,8 +2,7 @@ require(`dotenv`).config({ path: `.env` });
 
 module.exports = {
   siteMetadata: {
-    name: `Hello Worldldlddldld`,
-    tagline: `mij is cool`,
+    title: 'Mij',
   },
   plugins: [
     `gatsby-plugin-sass`,

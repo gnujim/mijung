@@ -12,49 +12,85 @@ import resumeIcon from '../../assets/my-icons-collection/png/resume.png';
 
 const ContactContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  width: 50%;
+  width: 100%;
+  margin-top: 15px;
   /* padding: 5px; */
+  @media (min-width: 577px) {
+    margin-top: 0;
+    justify-content: space-between;
+    /* width: 40%; */
+  }
+  @media (min-width: 890px) {
+    width: 60%;
+  }
+  @media (min-width: 1300px) {
+    width: 45%;
+  }
 `;
 
 const ResumeLink = styled(Link)`
-  border-bottom: 0.5px dashed #fdfbf7;
   color: #333;
   font-size: 21px;
   opacity: 1;
   padding: 3px 0;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    opacity: 0.8;
-    border-bottom: 0.5px dashed #e3b5a5;
-  }
+
   &:visited {
     color: #333;
+  }
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+    border-bottom: 0.5px dashed #fdfbf7;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.8;
+      border-bottom: 0.5px dashed #e3b5a5;
+    }
   }
 `;
 
 const ContactLink = styled.a`
-  border-bottom: 0.5px dashed #fdfbf7;
   color: #333;
   font-size: 21px;
   opacity: 1;
   padding: 3px 0;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
-  &:hover {
-    opacity: 0.8;
-    border-bottom: 0.5px dashed #e3b5a5;
-  }
   &:visited {
     color: #333;
+  }
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+    border-bottom: 0.5px dashed #fdfbf7;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      opacity: 0.8;
+      border-bottom: 0.5px dashed #e3b5a5;
+    }
   }
 `;
 
 const Icon = styled.img`
-  width: 14px;
-  height: 14px;
-  margin: 0 5px 0 0;
+  width: 25px;
+  height: 25px;
+  margin: 0 40px 0 0;
+  @media (min-width: 577px) {
+    width: 14px;
+    height: 14px;
+    margin: 0 5px 0 0;
+  }
+  @media (min-width: 890px) {
+  }
+`;
+
+const Text = styled.div`
+  display: none;
+  @media (min-width: 577px) {
+    display: inline;
+  }
+  @media (min-width: 890px) {
+  }
 `;
 
 interface ContactQueryData {
@@ -122,7 +158,7 @@ export const Contact = () => (
       <ContactContainer>
         <ResumeLink to="/resume/">
           <Icon src={resumeIcon} />
-          Resume
+          <Text>Resume</Text>
         </ResumeLink>
 
         <ContactLink
@@ -130,20 +166,20 @@ export const Contact = () => (
           target="_blank"
         >
           <Icon src={linkedinIcon} />
-          LinkedIn
+          <Text>LinkedIn</Text>
         </ContactLink>
         <ContactLink
           href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.github}
           target="_blank"
         >
           <Icon src={githubIcon} />
-          Github
+          <Text>Github</Text>
         </ContactLink>
         <ContactLink
           href={`mailto:${data.allContentfulJsonResume.edges[0].node.jsonResume.basics.email}`}
         >
           <Icon src={mailIcon} />
-          Email Me
+          <Text>Email Me</Text>
         </ContactLink>
       </ContactContainer>
     )}
