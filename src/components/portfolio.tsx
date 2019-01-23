@@ -7,14 +7,14 @@ import Slider from 'react-slick';
 import linkIcon from '../../assets/my-icons-collection/png/unlink.png';
 
 const PortfolioContainer = styled.div`
-  /* border: 1px #e3b5a5; */
   background-color: #fdfbf7;
-
-  border: 1px dashed black;
+  border: 1px dashed #e3b5a5;
+  box-shadow: 8px 8px #e3b5a5c7;
   padding: 30px 50px;
 `;
 
 const PortfolioTitle = styled.div`
+  color: #333;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 46px;
@@ -36,7 +36,9 @@ const PortfolioCarousel = styled.div`
 
 const Project = styled.div`
   border: 1px dashed pink;
+  display: flex;
   position: relative;
+  justify-content: center;
   /* background-color: #fefefe; */
 `;
 
@@ -62,6 +64,7 @@ const ProjectOverlay = styled.div`
 `;
 
 const ProjectText = styled.div`
+  color: #333;
   position: absolute;
   top: 20px;
   left: 10px;
@@ -71,6 +74,7 @@ const ProjectText = styled.div`
 const ProjectLeft = styled.div``;
 
 const ProjectTitle = styled.div`
+  color: #333;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   font-size: 32px;

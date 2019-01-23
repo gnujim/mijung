@@ -3,15 +3,16 @@ import styled from 'styled-components';
 
 // Styled Components
 const FooterContainer = styled.div`
-  width: 100%;
+  margin-top: 25px;
   font-size: 12px;
+  width: 100%;
 `;
 
 const FooterLink = styled.a`
+  border-bottom: 1px solid transparent;
   color: inherit;
   text-decoration: none;
   transition: 0.2s ease-in-out;
-  border-bottom: 1px solid transparent;
   &:visited {
     color: inherit;
   }

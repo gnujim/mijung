@@ -12,18 +12,15 @@ import { Footer } from '../components/footer';
 
 // Styled Components Global Styles
 export const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Scope+One|Work+Sans|IBM+Plex+Sans:100,400|Karma|Libre+Baskerville:700|Playfair+Display:400,700|');
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Playfair+Display:400,700|');
 
 html {
   /* margin: 0 50px 50px 50px; */
 }
 body {
-  /* background: #ededed; */
   font-family: 'Cutive Mono', monospace;
-  /* font-family: 'IBM Plex Sans', sans-serif; */
-  /* font-weight: 100; */
-  border: 1px dashed #e3b5a5;
   margin: 10px 20px 30px 20px;
+  /* background: #ededed; */
   /* height: 100%; */
   /* margin: 20px 50px 50px 50px; */
   /* letter-spacing: -1px; */

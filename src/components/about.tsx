@@ -7,7 +7,7 @@ const AboutContainer = styled.div`
   border: 1px dashed #e3b5a5;
   display: flex;
   justify-content: space-between;
-  margin: 10px 10%;
+  margin: 40px 10%;
 `;
 
 const AboutImg = styled.img`
