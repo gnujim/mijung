@@ -1,15 +1,13 @@
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 
 import { Contact } from './contact';
+import { ResumeBasics } from '../resume';
 
 const HeaderContainer = styled.div`
   background-color: #fdfbf7;
   border: 1px dashed #e3b5a5;
   box-shadow: 8px 8px #e3b5a5c7;
-  /* font-family: 'Playfair Display', serif; */
-  /* height: 100px; */
   padding: 0 10px;
   display: flex;
   @media (min-width: 577px) {
@@ -45,46 +43,18 @@ const Name = styled.div`
   /* margin: 10px 0; */
 `;
 
-interface HeaderQueryData {
-  data: {
-    allContentfulJsonResume: {
-      edges: Array<{
-        node: {
-          jsonResume: {
-            basics: {
-              name: string;
-            };
-          };
-        };
-      }>;
-    };
-  };
+interface HeaderProps {
+  basics: ResumeBasics;
 }
 
-export const Header = () => (
-  <StaticQuery
-    query={graphql`
-      query HeaderQueryData {
-        allContentfulJsonResume {
-          edges {
-            node {
-              jsonResume {
-                basics {
-                  name
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <HeaderContainer>
-        <HeaderContent>
-          <Name>{data.allContentfulJsonResume.edges[0].node.jsonResume.basics.name}</Name>
-          <Contact />
-        </HeaderContent>
-      </HeaderContainer>
-    )}
-  />
-);
+export const Header = (props: HeaderProps) => {
+  const { basics } = props;
+  return (
+    <HeaderContainer>
+      <HeaderContent>
+        <Name>{basics.name}</Name>
+        <Contact basics={basics} />
+      </HeaderContent>
+    </HeaderContainer>
+  );
+};

@@ -1,9 +1,8 @@
-// Third-party imports
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
 import styled from 'styled-components';
 import Slider from 'react-slick';
 
+import { ResumeProject } from '../resume';
 import linkIcon from '../../assets/my-icons-collection/png/unlink.png';
 
 const PortfolioContainer = styled.div`
@@ -120,84 +119,50 @@ const settings = {
   centerPadding: '100px',
 };
 
-interface PortfolioQueryData {
-  data: {
-    allContentfulJsonResume: {
-      edges: Array<{
-        node: {
-          jsonResume: {
-            projects: Array<{
-              name: string;
-              summary: string;
-              website: string;
-              releaseDate: string;
-            }>;
-          };
-        };
-      }>;
-    };
-  };
+interface PortfolioProps {
+  projects: Array<ResumeProject>;
 }
 
-export const Portfolio = () => (
-  <StaticQuery
-    query={graphql`
-      query PortfolioQuery {
-        allContentfulJsonResume {
-          edges {
-            node {
-              jsonResume {
-                projects {
-                  name
-                  summary
-                  website
-                  releaseDate
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <PortfolioContainer>
-        <PortfolioTitle>Portfolio</PortfolioTitle>
-        {/* <PortfolioCarousel>
-          <Slider {...settings}>
-            {data.allContentfulJsonResume.edges[0].node.jsonResume.projects.map(project => {
-              return (
-                <Project key={project.name}>
-                  <ProjectLeft>
-                    <ProjectTitle>{project.name}</ProjectTitle>
-                    <ProjectLink href={project.website}>{project.website}</ProjectLink>
-                    <ProjectDate>{project.releaseDate}</ProjectDate>
-                    <ProjectDescription>{project.summary}</ProjectDescription>
-                  </ProjectLeft>
-                  <ProjectImg src="https://picsum.photos/400/300/?random" />
-                </Project>
-              );
-            })}
-          </Slider>
-        </PortfolioCarousel> */}
-        <PortfolioGrid>
-          {data.allContentfulJsonResume.edges[0].node.jsonResume.projects.map(project => {
-            return (
-              <Project key={project.name}>
-                {/* <ProjectDescription>{project.summary}</ProjectDescription> */}
-                <ProjectImg src="https://picsum.photos/400/300/?random" />
-                <ProjectOverlay />
-                <ProjectText>
-                  {' '}
-                  <ProjectLink href={project.website}>
-                    <ProjectTitle>{project.name} </ProjectTitle>
-                  </ProjectLink>
-                  <ProjectDate>{project.releaseDate}</ProjectDate>
-                </ProjectText>
-              </Project>
-            );
-          })}
-        </PortfolioGrid>
-      </PortfolioContainer>
-    )}
-  />
-);
+export const Portfolio = (props: PortfolioProps) => {
+  const { projects } = props;
+  return (
+    <PortfolioContainer>
+      <PortfolioTitle>Portfolio</PortfolioTitle>
+      {/* <PortfolioCarousel>
+      <Slider {...settings}>
+        {data.allContentfulJsonResume.edges[0].node.jsonResume.projects.map(project => {
+          return (
+            <Project key={project.name}>
+              <ProjectLeft>
+                <ProjectTitle>{project.name}</ProjectTitle>
+                <ProjectLink href={project.website}>{project.website}</ProjectLink>
+                <ProjectDate>{project.releaseDate}</ProjectDate>
+                <ProjectDescription>{project.summary}</ProjectDescription>
+              </ProjectLeft>
+              <ProjectImg src="https://picsum.photos/400/300/?random" />
+            </Project>
+          );
+        })}
+      </Slider>
+    </PortfolioCarousel> */}
+      <PortfolioGrid>
+        {projects.map(project => {
+          return (
+            <Project key={project.name}>
+              {/* <ProjectDescription>{project.summary}</ProjectDescription> */}
+              <ProjectImg src="https://picsum.photos/400/300/?random" />
+              <ProjectOverlay />
+              <ProjectText>
+                {' '}
+                <ProjectLink href={project.website}>
+                  <ProjectTitle>{project.name} </ProjectTitle>
+                </ProjectLink>
+                <ProjectDate>{project.releaseDate}</ProjectDate>
+              </ProjectText>
+            </Project>
+          );
+        })}
+      </PortfolioGrid>
+    </PortfolioContainer>
+  );
+};

@@ -1,14 +1,14 @@
-// Third-party imports
 import React from 'react';
-import { graphql, StaticQuery, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
+import { ResumeBasics } from '../resume';
 import githubIcon from '../../assets/my-icons-collection/png/001-github.png';
 import linkedinIcon from '../../assets/my-icons-collection/png/linkedin.png';
-import locationIcon from '../../assets/my-icons-collection/png/003-placeholder.png';
-import phoneIcon from '../../assets/my-icons-collection/png/phone.png';
 import mailIcon from '../../assets/my-icons-collection/png/email.png';
 import resumeIcon from '../../assets/my-icons-collection/png/resume.png';
+import phoneIcon from '../../assets/my-icons-collection/png/phone.png';
+import locationIcon from '../../assets/my-icons-collection/png/003-placeholder.png';
 
 const ContactContainer = styled.div`
   display: flex;
@@ -93,95 +93,30 @@ const Text = styled.div`
   }
 `;
 
-interface ContactQueryData {
-  data: {
-    allContentfulJsonResume: {
-      edges: Array<{
-        node: {
-          jsonResume: {
-            basics: {
-              email: string;
-              phone: string;
-              github: string;
-              linkedin: string;
-              location: string;
-            };
-          };
-        };
-      }>;
-    };
-  };
+interface ContactProps {
+  basics: ResumeBasics;
 }
 
-// export const Contact = ({ data }: ContactProps) => {
-//   const contentful = data.allContentfulJsonResume.edges[0].node.jsonResume.basics;
-//   return (
-//     <ContactContainer>
-//       <a href={`mailto:${contentful.email}`}>
-//         <Icon src={mailIcon} />
-//       </a>
-//       <a href={`tel:${contentful.phone}`}>
-//         <Icon src={phoneIcon} />
-//       </a>
-//       <a href={contentful.github}>
-//         <Icon src={githubIcon} />
-//       </a>
-//       <a href={contentful.linkedin}>
-//         <Icon src={linkedinIcon} />
-//       </a>
-//     </ContactContainer>
-//   );
-// };
-
-export const Contact = () => (
-  <StaticQuery
-    query={graphql`
-      query ContactQueryData {
-        allContentfulJsonResume {
-          edges {
-            node {
-              jsonResume {
-                basics {
-                  email
-                  phone
-                  github
-                  linkedin
-                  location
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <ContactContainer>
-        <ResumeLink to="/resume/">
-          <Icon src={resumeIcon} />
-          <Text>Resume</Text>
-        </ResumeLink>
-
-        <ContactLink
-          href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.linkedin}
-          target="_blank"
-        >
-          <Icon src={linkedinIcon} />
-          <Text>LinkedIn</Text>
-        </ContactLink>
-        <ContactLink
-          href={data.allContentfulJsonResume.edges[0].node.jsonResume.basics.github}
-          target="_blank"
-        >
-          <Icon src={githubIcon} />
-          <Text>Github</Text>
-        </ContactLink>
-        <ContactLink
-          href={`mailto:${data.allContentfulJsonResume.edges[0].node.jsonResume.basics.email}`}
-        >
-          <Icon src={mailIcon} />
-          <Text>Email Me</Text>
-        </ContactLink>
-      </ContactContainer>
-    )}
-  />
-);
+export const Contact = (props: ContactProps) => {
+  const { basics } = props;
+  return (
+    <ContactContainer>
+      <ResumeLink to="/resume/">
+        <Icon src={resumeIcon} />
+        <Text>Resume</Text>
+      </ResumeLink>
+      <ContactLink href={basics.linkedin} target="_blank">
+        <Icon src={linkedinIcon} />
+        <Text>LinkedIn</Text>
+      </ContactLink>
+      <ContactLink href={basics.github} target="_blank">
+        <Icon src={githubIcon} />
+        <Text>Github</Text>
+      </ContactLink>
+      <ContactLink href={`mailto:${basics.email}`}>
+        <Icon src={mailIcon} />
+        <Text>Email Me</Text>
+      </ContactLink>
+    </ContactContainer>
+  );
+};

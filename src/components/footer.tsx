@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// Styled Components
 const FooterContainer = styled.div`
   margin-top: 25px;
   font-size: 12px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const FooterLink = styled.a`
@@ -23,9 +24,13 @@ const FooterLink = styled.a`
 
 export const Footer = () => {
   return (
+    // Change Laterrrr
     <FooterContainer>
-      Icons made by <FooterLink href="https://freepik.com">Freepik</FooterLink> from{' '}
-      <FooterLink href="https://flaticon.com">www.flaticon.com</FooterLink>
+      <div>
+        Icons made by <FooterLink href="https://freepik.com">Freepik</FooterLink> from{' '}
+        <FooterLink href="https://flaticon.com">www.flaticon.com</FooterLink>
+      </div>
+      <div>&#169; 2019 Mijijijijiiiijjjjunguga</div>
     </FooterContainer>
   );
 };
