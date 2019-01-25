@@ -78,7 +78,7 @@ export const ResumeProjects = (props: ResumeProjectsProps) => {
               {project.workUrl && (
                 <ProjectLink target="_blank" href={project.workUrl}>
                   <SiteIcon src={websiteIcon} />
-                  work
+                  showcase
                 </ProjectLink>
               )}
               {project.githubUrl && (
