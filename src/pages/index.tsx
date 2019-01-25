@@ -95,6 +95,7 @@ const query = graphql`
             projects {
               name
               summary
+              githubUrl
               website
               releaseDate
             }
