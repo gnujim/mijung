@@ -20,10 +20,22 @@ const ResumeSidebarContainer = styled.div`
   justify-content: space-between;
   padding: 20px 15px 30px 15px;
   position: relative;
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+  }
+  @media (min-width: 1035px) {
+  }
 `;
 
 const ResumeSidebarTop = styled.section`
   /* border: 1px dashed black; */
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+  }
+  @media (min-width: 1035px) {
+  }
 `;
 
 const ResumeName = styled.div`
@@ -33,11 +45,24 @@ const ResumeName = styled.div`
   line-height: 55px;
   font-weight: 700;
   margin-bottom: 20px;
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+  }
+  @media (min-width: 1035px) {
+  }
 `;
 
 const ResumeBio = styled.div`
   /* font-weight: 600; */
-  margin: 50px 0;
+  margin: 25px 0;
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+    margin: 50px 0;
+  }
+  @media (min-width: 1035px) {
+  }
 `;
 
 // CHANGE THIS FOR PDF MEDIA QUERY
@@ -58,23 +83,43 @@ const ResumeSectionTitle = styled.div`
   font-weight: 700;
   font-size: 40px;
   margin-bottom: 15px;
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+  }
+  @media (min-width: 1035px) {
+  }
 `;
 
 const ResumeSidebarBottom = styled.div`
-  align-items: flex-end;
   /* border: 1px dashed blue; */
   display: flex;
-  flex-grow: 1;
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+    align-items: flex-end;
+    flex-grow: 1;
+  }
+  @media (min-width: 1035px) {
+  }
 `;
 
 const ResumeContact = styled.div`
   bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  left: 0;
-  position: sticky;
-  right: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+    flex-direction: column;
+    left: 0;
+    position: sticky;
+    right: 0;
+    justify-content: initial;
+  }
+  @media (min-width: 1035px) {
+  }
 `;
 
 const ResumeLink = styled.a`
@@ -90,12 +135,49 @@ const ResumeLink = styled.a`
   &:hover {
     font-weight: 600;
   }
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+  }
+  @media (min-width: 1035px) {
+  }
 `;
 
 const ResumeIcon = styled.img`
-  width: 15px;
-  height: 16px;
+  width: 25px;
+  height: 25px;
   margin-right: 10px;
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+    width: 15px;
+    height: 16px;
+    margin-right: 10px;
+  }
+  @media (min-width: 1035px) {
+  }
+`;
+
+const ResumeContactText = styled.div`
+  display: none;
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 815px) {
+    display: block;
+  }
+  @media (min-width: 1035px) {
+  }
+`;
+
+const ResumeContactLocation = styled.div`
+  display: none;
+  @media (min-width: 577px) {
+  }
+  @media (min-width: 890px) {
+    display: block;
+  }
+  @media (min-width: 1035px) {
+  }
 `;
 
 interface ResumeSidebarProps {
@@ -121,28 +203,28 @@ export const ResumeSidebar = (props: ResumeSidebarProps) => {
         <ResumeContact>
           <ResumeLink href={`tel:${basics.phone}`}>
             <ResumeIcon src={phoneIcon} />
-            604.616.7795
+            <ResumeContactText>604.616.7795</ResumeContactText>
           </ResumeLink>
           <ResumeLink href={`mailto:${basics.email}`}>
             <ResumeIcon src={mailIcon} />
-            mijung.m@gmail.com
+            <ResumeContactText>mijung.m@gmail.com</ResumeContactText>
           </ResumeLink>
           <ResumeLink href={basics.github} target="_blank">
             <ResumeIcon src={githubIcon} />
-            gnujim
+            <ResumeContactText>gnujim</ResumeContactText>
           </ResumeLink>
           <ResumeLink href={basics.linkedin} target="_blank">
             <ResumeIcon src={linkedinIcon} />
-            gnujim
+            <ResumeContactText>gnujim</ResumeContactText>
           </ResumeLink>
           <ResumeLink href="https://angel.co/mij" target="_blank">
             <ResumeIcon style={{ width: '12px', marginRight: '13px' }} src={angelIcon} />
-            mij
+            <ResumeContactText>mij</ResumeContactText>
           </ResumeLink>
-          <div>
+          <ResumeContactLocation>
             <ResumeIcon src={locationIcon} />
             {basics.location}
-          </div>
+          </ResumeContactLocation>
         </ResumeContact>
       </ResumeSidebarBottom>
     </ResumeSidebarContainer>

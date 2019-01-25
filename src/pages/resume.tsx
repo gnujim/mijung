@@ -16,12 +16,12 @@ import { GlobalStyle } from '../pages/index';
 // };
 
 const ResumeContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 2fr;
   /* border: 1px dashed #e3b5a5; */
   @media (min-width: 577px) {
   }
   @media (min-width: 890px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
   }
   @media (min-width: 1035px) {
   }
