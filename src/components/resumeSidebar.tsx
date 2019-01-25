@@ -218,7 +218,10 @@ export const ResumeSidebar = (props: ResumeSidebarProps) => {
             <ResumeContactText>gnujim</ResumeContactText>
           </ResumeLink>
           <ResumeLink href="https://angel.co/mij" target="_blank">
-            <ResumeIcon style={{ width: '12px', marginRight: '13px' }} src={angelIcon} />
+            <ResumeIcon
+              style={{ height: '15px;', width: 'auto', marginRight: '15px' }}
+              src={angelIcon}
+            />
             <ResumeContactText>mij</ResumeContactText>
           </ResumeLink>
           <ResumeContactLocation>
