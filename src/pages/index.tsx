@@ -13,17 +13,11 @@ import { Portfolio } from '../components/portfolio';
 import { Header } from '../components/header';
 import { Footer } from '../components/footer';
 
-// const sizes = {
-//   desktop: 992,
-//   tablet: 768,
-//   phone: 576,
-// };
-
 // Styled Components Global Styles
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Playfair+Display:400,700');
 
-/* GET RID OF TRANSITION JUMP ON RELOAD !!! */
+/* TODO: GET RID OF TRANSITION JUMP ON RELOAD !!! */
 html {
   background: #fdfbf7;
   transition: all 0.3s ease-in-out;
@@ -32,24 +26,19 @@ html {
   @media (min-width: 890px) {
   }
   @media (min-width: 1035px) {
-
-    margin: 0 50px 50px 50px;
   }
 }
 
 body {
   font-family: 'Cutive Mono', monospace;
-  margin: 20px;
-  /* background: #ededed; */
-  /* height: 100%; */
-  /* margin: 20px 50px 50px 50px; */
-  /* letter-spacing: -1px; */
-  /* margin-top: 50px; */
+  max-width: 1300px;
+  margin: 30px 20px;
   @media (min-width: 577px) {
-
   }
   @media (min-width: 890px) {
-    margin: 10px 20px 30px 20px;
+  }
+  @media (min-width: 1300px) {
+    margin: 30px auto;
   }
 }
 `;
@@ -58,7 +47,6 @@ interface SiteQueryData {
   allContentfulJsonResume: {
     edges: Array<{
       node: {
-        // Is this ok if I'm not grabbing every Resume thing??
         jsonResume: Resume;
       };
     }>;
@@ -139,29 +127,10 @@ export default () => (
           <GlobalStyle />
           <Header basics={basics} />
           <About aboutText={aboutText} aboutPhotoUrl={aboutPhotoUrl} />
-          <Portfolio projects={projects} />
+          {/* <Portfolio projects={projects} /> */}
           <Footer />
         </>
       );
     }}
   />
 );
-
-// state = {
-//   show: 'blue',
-// };
-// componentDidMount() {
-//   window.addEventListener('scroll', event => {
-//     let show;
-//     if (window.scrollY < 50) {
-//       // console.log('LESS');
-//       show = 'green';
-//     } else {
-//       // console.log(window.scrollY);
-//       show = 'blue';
-//     }
-//     this.setState({
-//       show,
-//     });
-//   });
-// }

@@ -12,7 +12,6 @@ import { GlobalStyle } from '../pages/index';
 import homeIcon from '../../assets/my-icons-collection/png/003-home.png';
 
 const ResumeContainer = styled.div`
-  /* border: 1px dashed #e3b5a5; */
   @media print {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -33,10 +32,10 @@ const HomeLink = styled(Link)`
   font-size: 20px;
   display: flex;
   align-items: center;
-  margin: 15px 0;
-  /* position: absolute; */
-  /* top: 10px; */
-  /* left: 10px; */
+  /* margin: 15px 0; */
+  position: absolute;
+  top: 10px;
+  left: 10px;
   &:visited {
     color: inherit;
     text-decoration: none;
