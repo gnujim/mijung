@@ -153,10 +153,9 @@ export const Portfolio = (props: PortfolioProps) => {
               <ProjectImg src="https://picsum.photos/400/300/?random" />
               <ProjectOverlay />
               <ProjectText>
-                {' '}
-                <ProjectLink href={project.website}>
-                  <ProjectTitle>{project.name} </ProjectTitle>
-                </ProjectLink>
+                <ProjectTitle>{project.name} </ProjectTitle>
+                {project.website && <ProjectLink href={project.website}>Website</ProjectLink>}
+                {project.githubUrl && <ProjectLink href={project.githubUrl}>Github</ProjectLink>}
                 <ProjectDate>{project.releaseDate}</ProjectDate>
               </ProjectText>
             </Project>

@@ -13,6 +13,7 @@ export interface ResumeBasics {
   github: string;
   linkedin: string;
   location: string;
+  summary: string;
 }
 
 export interface ResumeSkill {
@@ -23,7 +24,8 @@ export interface ResumeSkill {
 export interface ResumeProject {
   name: string;
   summary: string;
-  website: string;
+  githubUrl?: string;
+  website?: string;
   releaseDate: string;
 }
 

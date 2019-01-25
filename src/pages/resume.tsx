@@ -18,7 +18,7 @@ import { GlobalStyle } from '../pages/index';
 const ResumeContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
-  border: 1px dashed #e3b5a5;
+  /* border: 1px dashed #e3b5a5; */
   @media (min-width: 577px) {
   }
   @media (min-width: 890px) {
@@ -35,15 +35,15 @@ interface ResumeQueryData {
       };
     }>;
   };
-  allContentfulAbout: {
-    edges: Array<{
-      node: {
-        aboutText: {
-          aboutText: string;
-        };
-      };
-    }>;
-  };
+  // allContentfulAbout: {
+  //   edges: Array<{
+  //     node: {
+  //       aboutText: {
+  //         aboutText: string;
+  //       };
+  //     };
+  //   }>;
+  // };
 }
 
 const query = graphql`
@@ -59,6 +59,7 @@ const query = graphql`
               github
               linkedin
               location
+              summary
             }
             skills {
               title
@@ -67,6 +68,7 @@ const query = graphql`
             projects {
               name
               summary
+              githubUrl
               website
               releaseDate
             }
@@ -87,15 +89,6 @@ const query = graphql`
         }
       }
     }
-    allContentfulAbout {
-      edges {
-        node {
-          aboutText {
-            aboutText
-          }
-        }
-      }
-    }
   }
 `;
 
@@ -103,15 +96,14 @@ export default () => (
   <StaticQuery
     query={query}
     render={(queryResult: ResumeQueryData) => {
-      const { allContentfulAbout, allContentfulJsonResume } = queryResult;
+      const { allContentfulJsonResume } = queryResult;
       const resume = allContentfulJsonResume.edges[0].node.jsonResume;
-      const aboutText = allContentfulAbout.edges[0].node.aboutText.aboutText;
       return (
         <>
           <GlobalStyle />
           <Link to="/">Home</Link>
           <ResumeContainer>
-            <ResumeSidebar resume={resume} aboutText={aboutText} />
+            <ResumeSidebar resume={resume} />
             <ResumeBody resume={resume} />
           </ResumeContainer>
         </>
