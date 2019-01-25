@@ -7,13 +7,18 @@ import { ResumeProjects } from '../components/resumeProjects';
 import { ResumeEducation } from '../components/resumeEducation';
 import { ResumeEmployment } from '../components/resumeEmployment';
 
-const ResumeBodyContainer = styled.div``;
+const ResumeBodyContainer = styled.div`
+  padding: 15px 20px 10px 20px;
+  font-size: 18px;
+`;
 
 const ResumeSectionTitle = styled.div`
+  /* border: 1px dashed blue; */
   color: #444;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   font-size: 40px;
+  line-height: 40px;
   margin-bottom: 15px;
 `;
 

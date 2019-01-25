@@ -3,15 +3,27 @@ import styled from 'styled-components';
 
 import { ResumeSkill } from '../resume';
 
-const ResumeSkillsContainer = styled.div``;
+const ResumeSkillsContainer = styled.div`
+  /* border: 1px dashed black; */
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e3b5a5;
+  margin-bottom: 20px;
+`;
+
+const Skills = styled.div`
+  margin-bottom: 8px;
+`;
 
 const SkillsTitle = styled.div`
   font-weight: 600;
   font-size: 20px;
   font-style: italic;
+  margin-bottom: 3px;
 `;
 
-const SkillsList = styled.div``;
+const SkillsList = styled.div`
+  /* margin-bottom: 8px; */
+`;
 
 interface ResumeSkillsProps {
   skills: Array<ResumeSkill>;
@@ -23,10 +35,10 @@ export const ResumeSkills = (props: ResumeSkillsProps) => {
     <ResumeSkillsContainer>
       {skills.map((category, index) => {
         return (
-          <div key={index}>
+          <Skills key={index}>
             <SkillsTitle>{category.title}</SkillsTitle>
             <SkillsList>{category.skills}</SkillsList>
-          </div>
+          </Skills>
         );
       })}
     </ResumeSkillsContainer>

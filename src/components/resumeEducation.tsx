@@ -3,12 +3,28 @@ import styled from 'styled-components';
 
 import { ResumeSchool } from '../resume';
 
-const ResumeEducationContainer = styled.div``;
+const ResumeEducationContainer = styled.div`
+  /* border: 1px dashed black; */
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e3b5a5;
+  margin-bottom: 20px;
+`;
+
+const School = styled.div`
+  margin-bottom: 8px;
+`;
+
+const SchoolHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+`;
 
 const SchoolName = styled.div`
   font-weight: 600;
   font-size: 20px;
   font-style: italic;
+  /* margin-bottom: 15px; */
 `;
 
 interface ResumeEducationProps {
@@ -21,11 +37,13 @@ export const ResumeEducation = (props: ResumeEducationProps) => {
     <ResumeEducationContainer>
       {education.map((school, index) => {
         return (
-          <div key={index}>
-            <SchoolName>{school.institution}</SchoolName>
+          <School key={index}>
+            <SchoolHeader>
+              <SchoolName>{school.institution}</SchoolName>
+              <div>{school.date}</div>
+            </SchoolHeader>
             <div>{school.area}</div>
-            <div>{school.date}</div>
-          </div>
+          </School>
         );
       })}
     </ResumeEducationContainer>
