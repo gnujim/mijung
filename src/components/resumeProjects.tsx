@@ -72,7 +72,13 @@ export const ResumeProjects = (props: ResumeProjectsProps) => {
               {project.website && (
                 <ProjectLink target="_blank" href={project.website}>
                   <SiteIcon src={websiteIcon} />
-                  website
+                  www
+                </ProjectLink>
+              )}
+              {project.workUrl && (
+                <ProjectLink target="_blank" href={project.workUrl}>
+                  <SiteIcon src={websiteIcon} />
+                  work
                 </ProjectLink>
               )}
               {project.githubUrl && (
@@ -83,6 +89,7 @@ export const ResumeProjects = (props: ResumeProjectsProps) => {
               )}
             </ProjectSites>
             <div>{project.summary}</div>
+            <div>{project.stack}</div>
           </Project>
         );
       })}
