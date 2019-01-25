@@ -67,8 +67,10 @@ const ResumeBio = styled.div`
 
 // CHANGE THIS FOR PDF MEDIA QUERY
 const ResumeSidebarMiddle = styled.div`
-  border: 1px dashed black;
   display: none;
+  @media print {
+    display: block;
+  }
   @media (min-width: 577px) {
   }
   @media (min-width: 890px) {
@@ -94,6 +96,9 @@ const ResumeSectionTitle = styled.div`
 const ResumeSidebarBottom = styled.div`
   /* border: 1px dashed blue; */
   display: flex;
+  @media print {
+    align-items: flex-end;
+  }
   @media (min-width: 577px) {
   }
   @media (min-width: 890px) {
@@ -109,6 +114,9 @@ const ResumeContact = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  @media print {
+    flex-direction: column;
+  }
   @media (min-width: 577px) {
   }
   @media (min-width: 890px) {
@@ -147,6 +155,8 @@ const ResumeIcon = styled.img`
   width: 25px;
   height: 25px;
   margin-right: 10px;
+  @media print {
+  }
   @media (min-width: 577px) {
   }
   @media (min-width: 890px) {
@@ -160,6 +170,9 @@ const ResumeIcon = styled.img`
 
 const ResumeContactText = styled.div`
   display: none;
+  @media print {
+    display: block;
+  }
   @media (min-width: 577px) {
   }
   @media (min-width: 815px) {
@@ -171,6 +184,8 @@ const ResumeContactText = styled.div`
 
 const ResumeContactLocation = styled.div`
   display: none;
+  @media print {
+  }
   @media (min-width: 577px) {
   }
   @media (min-width: 890px) {

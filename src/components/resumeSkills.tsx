@@ -8,6 +8,9 @@ const ResumeSkillsContainer = styled.div`
   padding-bottom: 10px;
   border-bottom: 1px dashed #e3b5a5;
   margin-bottom: 20px;
+  @media print {
+    border: none;
+  }
 `;
 
 const Skills = styled.div`

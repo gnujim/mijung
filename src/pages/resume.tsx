@@ -9,15 +9,14 @@ import { Resume } from '../resume';
 import { ResumeSidebar } from '../components/resumeSidebar';
 import { ResumeBody } from '../components/resumeBody';
 import { GlobalStyle } from '../pages/index';
-
-// const sizes = {
-//   desktop: 992,
-//   tablet: 768,
-//   phone: 576,
-// };
+import homeIcon from '../../assets/my-icons-collection/png/003-home.png';
 
 const ResumeContainer = styled.div`
   /* border: 1px dashed #e3b5a5; */
+  @media print {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
   @media (min-width: 577px) {
   }
   @media (min-width: 890px) {
@@ -25,6 +24,25 @@ const ResumeContainer = styled.div`
     grid-template-columns: 1fr 2fr;
   }
   @media (min-width: 1035px) {
+  }
+`;
+
+const HomeLink = styled(Link)`
+  color: inherit;
+  text-decoration: none;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  /* position: absolute; */
+  /* top: 10px; */
+  /* left: 10px; */
+  &:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+  &:hover {
+    font-weight: 600;
   }
 `;
 
@@ -107,7 +125,10 @@ export default () => (
             <title>Mij - Resume</title>
           </Helmet>
           <GlobalStyle />
-          <Link to="/">Home</Link>
+          <HomeLink to="/">
+            <img style={{ width: '20px', height: '20px', marginRight: '10px' }} src={homeIcon} />
+            Home
+          </HomeLink>
           <ResumeContainer>
             <ResumeSidebar resume={resume} />
             <ResumeBody resume={resume} />
