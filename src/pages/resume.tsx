@@ -70,7 +70,9 @@ const query = graphql`
               summary
               githubUrl
               website
+              workUrl
               releaseDate
+              stack
             }
             education {
               area

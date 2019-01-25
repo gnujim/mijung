@@ -26,45 +26,92 @@
   ],
   "projects": [
     {
+      "name": "Personal Site",
+      "releaseDate": "2019.01",
+      "summary": "Solo project. A Gatsby site to showcase my portfolio, and learn GraphQL.",
+      "website": "https://mijung.io",
+      "githubUrl": "https://github.com/gnujim/mijung",
+      "stack": "React | Typescript | Styled Components | GraphQL"
+    },
+    {
       "name": "Developmental Milestones",
-      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "releaseDate": "2018.11",
+      "summary": "Solo project. A study tool for students based on the SNAPSHOTS DEVELOPMENTAL MILESTONES chart.",
       "website": "https://itunes.apple.com/ca/app/developmental-milestones/id1439858858?mt=8",
       "githubUrl": "https://github.com/gnujim/milestones-app",
-      "releaseDate": "2018.11"
+      "stack": "React Native | Typescript | Styled Components | Expo"
+    },
+    {
+      "name": "DBS Developments",
+      "releaseDate": "2018.05",
+      "summary": "Collaborative work project. Customized business site for client made at Pivot & Pilot.",
+      "workUrl": "https://pivotandpilot.com/portfolio/soberlife/",
+      "stack": "Wordpress | jQuery"
+    },
+    {
+      "name": "DBS Developments",
+      "releaseDate": "2018.04",
+      "summary": "Collaborative work project. Customized business site for client made at Pivot & Pilot.",
+      "website": "https://dbsdevelopments.ca",
+      "workUrl": "https://pivotandpilot.com/portfolio/dbs-developments-2/",
+      "stack": "Wordpress | jQuery"
     },
     {
       "name": "Maria DeCotiis",
-      "summary": "Customized business site for client. ",
+      "releaseDate": "2018.03",
+      "summary": "Collaborative work project. Customized business site for client made at Pivot & Pilot.",
       "website": "https://mariadecotiis.com",
-      "releaseDate": "2018.04"
+      "workUrl": "https://pivotandpilot.com/portfolio/maria-decotiis/",
+      "stack": "Wordpress | jQuery | AJAX | PHP"
     },
     {
-      "name": "FND Developments",
-      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "website": "",
-      "githubUrl": "http://publication.com",
-      "releaseDate": "2014.10.01"
+      "name": "Pivot & Pilot - Contact Form",
+      "releaseDate": "2018.03",
+      "summary": "Maintenance and...",
+      "website": "https://pivotandpilot.com",
+      "stack": "Stuff"
     },
     {
-      "name": "something else",
-      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      "website": "",
-      "githubUrl": "http://publication.com",
-      "releaseDate": "2014.10.01"
-    },
-    {
-      "name": "Scoresheet",
-      "summary": "A web app that auto-calculates scores from board games using user-inputted values. Final project for Lighthouse Labs. Collaborative.",
-      "website": "",
-      "githubUrl": "https://github.com/tasha-urbancic/scoresheet",
-      "releaseDate": "2017.11"
+      "name": "Project Soul",
+      "releaseDate": "2017.12/2018.01",
+      "summary": "Collaborative work project. Customized business site for client made at Pivot & Pilot.",
+      "workUrl": "https://pivotandpilot.com/portfolio/project-soul/",
+      "stack": "Wordpress | jQuery | AJAX | PHP"
     },
     {
       "name": "Scoresheet",
-      "summary": "A web app that auto-calculates scores from board games using user-inputted values. Final project for Lighthouse Labs. Collaborative.",
-      "website": "",
+      "releaseDate": "2017.11",
+      "summary": "Collaborative final project. A web app that auto-calculates scores from board games using user-inputted values. Final project for Lighthouse Labs.",
       "githubUrl": "https://github.com/tasha-urbancic/scoresheet",
-      "releaseDate": "2017.11"
+      "stack": "React | SASS"
+    },
+    {
+      "name": "Jungle",
+      "releaseDate": "2017.10",
+      "summary": "Solo assignment. A mini e-commerce app built with Ruby on Rails.",
+      "githubUrl": "https://github.com/gnujim/jungle-rails",
+      "stack": "Ruby | Rails | ERB | ActiveRecord | PostgreSQL"
+    },
+    {
+      "name": "Chatty App",
+      "releaseDate": "2017.10",
+      "summary": "Solo assignment. A simple, real-time chat application.",
+      "githubUrl": "https://github.com/gnujim/chatty-app",
+      "stack": "React | Express | Websockets | Webpack"
+    },
+    {
+      "name": "Smart TODO List",
+      "releaseDate": "2017.09",
+      "summary": "Collaborative mid-term project. A 'Smart To Do List' that auto-categorizes items into the appropriate list, using keywords and APIs.",
+      "githubUrl": "https://github.com/TuanPham303/smart-TODO-List",
+      "stack": "JS | HTML | Bootstrap | SASS | jQuery | Express | AJAX | NodeJS | EJS | Knex | PostgreSQL | Google Location Service API | Amazon Product API"
+    },
+    {
+      "name": "Tweeter",
+      "releaseDate": "2017.09",
+      "summary": "Solo assignment. A single-page Twitter clone.",
+      "githubUrl": "https://github.com/gnujim/tweeter",
+      "stack": "JS | HTML | CSS | jQuery | Express | AJAX | NodeJS | MongoDB"
     }
   ],
   "education": [
@@ -84,25 +131,25 @@
   "work": [
     {
       "company": "Pivot & Pilot",
-      "endDate": "2018.05",
-      "summary": "I was in charge of developing highly customized sites that were user-friendly for both the clients and their customer base. My responsibilities included researching and selecting tech-stack, and providing practical advice from a development standpoint. Working closely with the design team, I helped to deliver unique and beautiful products.",
+      "summary": "I was in charge of developing highly customized sites that were user-friendly for both the clients and their customer base. My responsibilities included researching and selecting an appropriate tech-stack, maintaining existing sites, and providing practical advice from a development standpoint. Working closely with the design team, I helped to deliver unique and beautiful products. ",
       "website": "https://pivotandpilot.com",
       "position": "Web Developer",
-      "startDate": "2017.11"
+      "startDate": "2017.11",
+      "endDate": "2018.05"
     },
     {
       "company": "Scotiabank",
-      "endDate": "2017.09",
       "summary": "Along with helping customers with a broad array of services and training new employees, I was in charge of the handling and record keeping of the treasury. This required paying close attention to minute details to complete complex tasks involving large sums of money, without error. There were many instances of high stress circumstances, where I had to quickly find efficient solutions to solve the problem at hand.",
       "position": "CSR",
-      "startDate": "2014.09"
+      "startDate": "2014.09",
+      "endDate": "2017.09"
     },
     {
       "company": "Urban Outfitters",
-      "endDate": "2014.03",
       "summary": "I led the shipment team and managed the backstock inventory, which involved working within time constraints and allocating tasks to the appropriate associates. I also assisted with the placement and merchandising of inventory, developing an eye for detail and design.",
       "position": "Shipment Lead",
-      "startDate": "2007.12"
+      "startDate": "2007.12",
+      "endDate": "2014.03"
     }
   ],
   "references": [

@@ -11,9 +11,9 @@ export interface ResumeBasics {
   email: string;
   phone: string;
   github: string;
+  summary: string;
   linkedin: string;
   location: string;
-  summary: string;
 }
 
 export interface ResumeSkill {
@@ -23,10 +23,12 @@ export interface ResumeSkill {
 
 export interface ResumeProject {
   name: string;
-  summary: string;
-  githubUrl?: string;
-  website?: string;
   releaseDate: string;
+  summary: string;
+  website?: string;
+  workUrl?: string;
+  githubUrl?: string;
+  stack: string;
 }
 
 export interface ResumeSchool {
@@ -39,7 +41,7 @@ export interface ResumeWork {
   company: string;
   summary: string;
   position: string;
-  website: string;
+  website?: string;
   startDate: string;
   endDate: string;
 }
