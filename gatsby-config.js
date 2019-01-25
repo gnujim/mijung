@@ -2,7 +2,8 @@ require(`dotenv`).config({ path: `.env` });
 
 module.exports = {
   siteMetadata: {
-    title: 'Mij',
+    title: `Mij`,
+    siteUrl: `https://mijung.io`,
   },
   plugins: [
     `gatsby-plugin-sass`,
