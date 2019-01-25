@@ -1,6 +1,7 @@
 // Third-party imports
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import { createGlobalStyle } from 'styled-components';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -132,6 +133,9 @@ export default () => (
 
       return (
         <>
+          <Helmet>
+            <title>Mij</title>
+          </Helmet>
           <GlobalStyle />
           <Header basics={basics} />
           <About aboutText={aboutText} aboutPhotoUrl={aboutPhotoUrl} />
