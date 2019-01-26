@@ -4,41 +4,44 @@ import styled from 'styled-components';
 const AboutContainer = styled.div`
   border: 1px dashed #e3b5a5;
   display: flex;
-  margin: 40px 0;
   flex-direction: column;
-  padding: 0 10px;
-  @media (min-width: 577px) {
-    justify-content: space-between;
+  margin: 40px 0;
+  padding: 20px 10px;
+  @media (min-width: 675px) {
     flex-direction: row;
-    padding: 0;
+    justify-content: space-between;
+    align-items: center;
   }
   @media (min-width: 890px) {
     margin: 40px 10%;
+    padding: 20px;
+  }
+  @media (min-width: 1300px) {
+    justify-content: space-evenly;
   }
 `;
 
 const AboutImgMobile = styled.img`
-  object-fit: contain;
-  max-height: 300px;
   display: block;
-  @media (min-width: 577px) {
+  margin-bottom: 10px;
+  width: 100%;
+  object-fit: contain;
+  @media (min-width: 675px) {
     display: none;
-  }
-  @media (min-width: 890px) {
   }
 `;
 
 const AboutImg = styled.img`
   display: none;
-  @media (min-width: 577px) {
-    object-fit: contain;
+  @media (min-width: 675px) {
+    display: block;
     max-height: 300px;
     max-width: 40vw;
-    display: block;
+    object-fit: contain;
   }
   @media (min-width: 890px) {
-    max-height: 400px;
     height: 400px;
+    max-height: 400px;
     width: 500px;
   }
 `;
@@ -46,12 +49,17 @@ const AboutImg = styled.img`
 const AboutText = styled.div`
   color: #444444;
   font-size: 20px;
-  margin-bottom: 30px;
-  @media (min-width: 577px) {
+  @media (min-width: 675px) {
+    padding-right: 15px;
   }
   @media (min-width: 890px) {
-    width: 60%;
     margin-bottom: 0;
+  }
+  @media (min-width: 1050px) {
+    font-size: 22px;
+  }
+  @media (min-width: 1300px) {
+    width: 40%;
   }
 `;
 

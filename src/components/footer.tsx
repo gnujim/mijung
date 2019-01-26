@@ -2,11 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.div`
-  margin-top: 25px;
+  margin-top: 15px;
   font-size: 12px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  @media (min-width: 675px) {
+    margin-top: 25px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 const FooterLink = styled.a`
@@ -17,8 +22,17 @@ const FooterLink = styled.a`
   &:visited {
     color: inherit;
   }
-  &:hover {
-    border-bottom: 1px solid #333;
+  @media (min-width: 890px) {
+    &:hover {
+      border-bottom: 1px solid #333;
+    }
+  }
+`;
+
+const FooterCopyright = styled.div`
+  margin-top: 5px;
+  @media (min-width: 675px) {
+    margin-top: 0;
   }
 `;
 
@@ -27,10 +41,11 @@ export const Footer = () => {
     // Change Laterrrr
     <FooterContainer>
       <div>
-        Icons made by <FooterLink href="https://freepik.com">Freepik</FooterLink> from{' '}
+        Icons made by <FooterLink href="https://smashicons.com/">Smashicons</FooterLink>,{' '}
+        <FooterLink href="https://freepik.com">Freepik</FooterLink>, and mavadee from{' '}
         <FooterLink href="https://flaticon.com">www.flaticon.com</FooterLink>
       </div>
-      <div>&#169; 2019 Mijijijijiiiijjjjunguga</div>
+      <FooterCopyright>&#169; 2019 Mijung Lee</FooterCopyright>
     </FooterContainer>
   );
 };

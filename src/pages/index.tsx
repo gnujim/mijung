@@ -9,7 +9,7 @@ import 'slick-carousel/slick/slick-theme.css';
 // Local imports
 import { Resume } from '../resume';
 import { About } from '../components/about';
-import { Portfolio } from '../components/portfolio';
+// import { Portfolio } from '../components/portfolio';
 import { Header } from '../components/header';
 import { Footer } from '../components/footer';
 
@@ -21,12 +21,6 @@ export const GlobalStyle = createGlobalStyle`
 html {
   background: #fdfbf7;
   transition: all 0.3s ease-in-out;
-  @media (min-width: 577px) {
-  }
-  @media (min-width: 890px) {
-  }
-  @media (min-width: 1035px) {
-  }
 }
 
 body {
@@ -118,7 +112,6 @@ export default () => (
       const { basics, projects } = resume;
       const aboutText = allContentfulAbout.edges[0].node.aboutText.aboutText;
       const aboutPhotoUrl = allContentfulAbout.edges[0].node.aboutPhoto.file.url;
-
       return (
         <>
           <Helmet>
