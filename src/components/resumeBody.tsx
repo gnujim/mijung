@@ -8,8 +8,12 @@ import { ResumeEducation } from '../components/resumeEducation';
 import { ResumeEmployment } from '../components/resumeEmployment';
 
 const ResumeBodyContainer = styled.div`
-  padding: 15px 20px 10px 20px;
+  margin-top: 10px;
+  padding: 15px 15px 10px 15px;
   font-size: 18px;
+  @media (min-width: 890px) {
+    margin: 0;
+  }
 `;
 
 const ResumeSectionTitle = styled.div`

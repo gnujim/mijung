@@ -2,7 +2,7 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -18,23 +18,45 @@ export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Playfair+Display:400,700');
 
 /* TODO: GET RID OF TRANSITION JUMP ON RELOAD !!! */
+* {
+  /* box-sizing: border-box;   */
+}
+
 html {
-  background: #fdfbf7;
-  transition: all 0.3s ease-in-out;
 }
 
 body {
   font-family: 'Cutive Mono', monospace;
-  max-width: 1300px;
-  margin: 30px 20px;
+
+  background: #fdfbf7;
+  /* transition: all 0.3s ease-in-out; */
+  padding: 0;
+  margin: 0;
+
+}
+
+`;
+
+const BodyContainer = styled.div`
+  /* max-width: 1300px; */
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  /* padding: 30px 0; */
   @media (min-width: 577px) {
+    height: calc(100vh - 4px);
   }
   @media (min-width: 890px) {
   }
   @media (min-width: 1300px) {
-    margin: 30px auto;
+    /* margin: 0 auto; */
+    /* margin: 30px auto; */
   }
-}
+`;
+
+const Spacer = styled.div`
+  display: flex;
+  flex-grow: 1;
 `;
 
 interface SiteQueryData {
@@ -118,10 +140,13 @@ export default () => (
             <title>Mij</title>
           </Helmet>
           <GlobalStyle />
-          <Header basics={basics} />
-          <About aboutText={aboutText} aboutPhotoUrl={aboutPhotoUrl} />
-          {/* <Portfolio projects={projects} /> */}
-          <Footer />
+          <BodyContainer>
+            <Header basics={basics} />
+            <About aboutText={aboutText} aboutPhotoUrl={aboutPhotoUrl} />
+            {/* <Portfolio projects={projects} /> */}
+            <Spacer />
+            <Footer />
+          </BodyContainer>
         </>
       );
     }}

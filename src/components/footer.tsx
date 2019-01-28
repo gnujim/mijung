@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.div`
-  margin-top: 15px;
+  /* margin-top: 15px; */
   font-size: 12px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
   @media (min-width: 675px) {
     margin-top: 25px;
     flex-direction: row;

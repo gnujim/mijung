@@ -12,6 +12,8 @@ import { GlobalStyle } from '../pages/index';
 import homeIcon from '../../assets/my-icons-collection/png/003-home.png';
 
 const ResumeContainer = styled.div`
+  margin: 30px 20px;
+  /* max-width: 1300px; */
   @media print {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -24,18 +26,22 @@ const ResumeContainer = styled.div`
   }
   @media (min-width: 1035px) {
   }
+  @media (min-width: 1300px) {
+    /* margin: 0 auto; */
+    /* margin: 30px auto; */
+  }
 `;
 
 const HomeLink = styled(Link)`
   color: inherit;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   /* margin: 15px 0; */
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 7px;
+  left: 20px;
   &:visited {
     color: inherit;
     text-decoration: none;
@@ -125,7 +131,7 @@ export default () => (
           </Helmet>
           <GlobalStyle />
           <HomeLink to="/">
-            <img style={{ width: '20px', height: '20px', marginRight: '10px' }} src={homeIcon} />
+            <img style={{ width: '15px', height: '15px', marginRight: '10px' }} src={homeIcon} />
             Home
           </HomeLink>
           <ResumeContainer>

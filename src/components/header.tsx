@@ -10,6 +10,7 @@ const HeaderContainer = styled.div`
   box-shadow: 8px 8px #e3b5a5c7;
   padding: 0 10px;
   display: flex;
+  margin-top: 30px;
   @media (min-width: 890px) {
     align-items: center;
     padding: 0 50px;
