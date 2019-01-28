@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { ResumeProject } from '../resume';
 import websiteIcon from '../../assets/my-icons-collection/png/worldwide.png';
 import githubIcon from '../../assets/my-icons-collection/png/001-github.png';
+import showcaseIcon from '../../assets/my-icons-collection/png/002-showcase.png';
 
 const ResumeProjectsContainer = styled.div`
   /* border: 1px dashed black; */
@@ -72,12 +73,12 @@ export const ResumeProjects = (props: ResumeProjectsProps) => {
               {project.website && (
                 <ProjectLink target="_blank" href={project.website}>
                   <SiteIcon src={websiteIcon} />
-                  www
+                  website
                 </ProjectLink>
               )}
               {project.workUrl && (
                 <ProjectLink target="_blank" href={project.workUrl}>
-                  <SiteIcon src={websiteIcon} />
+                  <SiteIcon src={showcaseIcon} />
                   showcase
                 </ProjectLink>
               )}
