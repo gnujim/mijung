@@ -3,8 +3,8 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import styled, { createGlobalStyle } from 'styled-components';
-import 'typeface-cutive-mono';
-import 'typeface-playfair-display';
+// import 'typeface-cutive-mono';
+// import 'typeface-playfair-display';
 
 // Local imports
 import { Resume } from '../resume';
