@@ -38,12 +38,13 @@ const BodyContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 20px;
-  /* max-width: 1300px; */
+  max-width: 1300px;
   min-height: 675px;
   @media (min-width: 577px) {
     height: calc(100vh - 4px);
   }
-  @media (min-width: 1300px) {
+  @media (min-width: 1320px) {
+    margin: 0 auto;
   }
 `;
 

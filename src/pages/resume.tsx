@@ -13,7 +13,7 @@ import homeIcon from '../../assets/my-icons-collection/png/003-home.png';
 
 const ResumeContainer = styled.div`
   margin: 30px 20px;
-  /* max-width: 1300px; */
+  max-width: 1300px;
   @media print {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -22,9 +22,8 @@ const ResumeContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
-  @media (min-width: 1300px) {
-    /* margin: 0 auto; */
-    /* margin: 30px auto; */
+  @media (min-width: 1320px) {
+    margin: 30px auto;
   }
 `;
 
@@ -44,6 +43,9 @@ const HomeLink = styled(Link)`
   }
   &:hover {
     font-weight: 600;
+  }
+  @media (min-width: 1320px) {
+    left: calc((100vw - 1300px) / 2);
   }
 `;
 
