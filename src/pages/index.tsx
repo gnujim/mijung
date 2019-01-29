@@ -27,7 +27,8 @@ html {
 }
 body {
   font-family: 'Cutive Mono', monospace;
-  background: #fdfbf7;
+  /* background: #fdfbf7; */
+  background: #e3b5a5;
   transition: all 0.3s ease-in-out;
   padding: 0;
   margin: 0;
