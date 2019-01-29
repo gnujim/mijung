@@ -126,10 +126,6 @@ export default () => (
         <>
           <Helmet>
             <title>Mij - Resume</title>
-            <link
-              rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Cutive+Mono|Playfair+Display:400,700"
-            />
           </Helmet>
           <GlobalStyle />
           <HomeLink to="/">

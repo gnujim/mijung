@@ -15,7 +15,7 @@ import { Footer } from '../components/footer';
 
 // Styled Components Global Styles
 export const GlobalStyle = createGlobalStyle`
-/* @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Playfair+Display:400,700'); */
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Playfair+Display:400,700');
 
 /* TODO: GET RID OF TRANSITION JUMP ON RELOAD !!! */
 * {
@@ -132,10 +132,6 @@ export default () => (
         <>
           <Helmet>
             <title>Mij</title>
-            <link
-              rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Cutive+Mono|Playfair+Display:400,700"
-            />
           </Helmet>
           <GlobalStyle />
           <BodyContainer>
