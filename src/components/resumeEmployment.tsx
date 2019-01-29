@@ -14,8 +14,12 @@ const Workplace = styled.div`
 
 const WorkplaceHeader = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 3px;
+  @media (min-width: 577px) {
+    flex-direction: row;
+  }
 `;
 
 const WorkplaceName = styled.div`

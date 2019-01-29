@@ -18,13 +18,9 @@ const ResumeContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
-  @media (min-width: 577px) {
-  }
   @media (min-width: 890px) {
     display: grid;
     grid-template-columns: 1fr 2fr;
-  }
-  @media (min-width: 1035px) {
   }
   @media (min-width: 1300px) {
     /* margin: 0 auto; */

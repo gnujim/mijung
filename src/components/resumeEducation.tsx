@@ -18,6 +18,10 @@ const SchoolHeader = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 3px;
+  flex-direction: column;
+  @media (min-width: 577px) {
+    flex-direction: row;
+  }
 `;
 
 const SchoolName = styled.div`

@@ -19,6 +19,7 @@ const ResumeSidebarContainer = styled.div`
   font-size: 18px;
   justify-content: space-between;
   padding: 20px 15px 30px 15px;
+
   position: relative;
   @media (min-width: 577px) {
   }

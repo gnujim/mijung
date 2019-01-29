@@ -19,8 +19,12 @@ const Project = styled.div`
 
 const ProjectHeader = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 3px;
+  @media (min-width: 577px) {
+    flex-direction: row;
+  }
 `;
 
 const ProjectName = styled.div`

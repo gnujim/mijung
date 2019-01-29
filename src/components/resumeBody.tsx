@@ -9,9 +9,10 @@ import { ResumeEmployment } from '../components/resumeEmployment';
 
 const ResumeBodyContainer = styled.div`
   margin-top: 10px;
-  padding: 15px 15px 10px 15px;
+  padding: 15px 5px 10px 5px;
   font-size: 18px;
   @media (min-width: 890px) {
+    padding: 15px 15px 10px 15px;
     margin: 0;
   }
 `;
