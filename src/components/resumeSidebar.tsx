@@ -69,7 +69,7 @@ const ResumeBio = styled.div`
 const ResumeSidebarMiddle = styled.div`
   display: none;
   @media print {
-    display: block;
+    /* display: block; */
   }
   @media (min-width: 577px) {
   }

@@ -19,38 +19,31 @@ export const GlobalStyle = createGlobalStyle`
 
 /* TODO: GET RID OF TRANSITION JUMP ON RELOAD !!! */
 * {
-  /* box-sizing: border-box;   */
+  box-sizing: border-box;  
 }
-
 html {
-}
-
-body {
-  font-family: 'Cutive Mono', monospace;
-
-  background: #fdfbf7;
-  /* transition: all 0.3s ease-in-out; */
   padding: 0;
   margin: 0;
-
 }
-
+body {
+  font-family: 'Cutive Mono', monospace;
+  background: #fdfbf7;
+  transition: all 0.3s ease-in-out;
+  padding: 0;
+  margin: 0;
+}
 `;
 
 const BodyContainer = styled.div`
-  /* max-width: 1300px; */
   display: flex;
   flex-direction: column;
   margin: 0 20px;
-  /* padding: 30px 0; */
+  /* max-width: 1300px; */
+  min-height: 675px;
   @media (min-width: 577px) {
     height: calc(100vh - 4px);
   }
-  @media (min-width: 890px) {
-  }
   @media (min-width: 1300px) {
-    /* margin: 0 auto; */
-    /* margin: 30px auto; */
   }
 `;
 
