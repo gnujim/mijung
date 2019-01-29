@@ -6,7 +6,6 @@ module.exports = {
     siteUrl: `https://mijung.io`,
   },
   plugins: [
-    `gatsby-plugin-sass`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
