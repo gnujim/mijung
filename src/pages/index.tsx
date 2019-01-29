@@ -130,10 +130,10 @@ export default () => (
       const aboutPhotoUrl = allContentfulAbout.edges[0].node.aboutPhoto.file.url;
       return (
         <>
+          <GlobalStyle />
           <Helmet>
             <title>Mij</title>
           </Helmet>
-          <GlobalStyle />
           <BodyContainer>
             <Header basics={basics} />
             <About aboutText={aboutText} aboutPhotoUrl={aboutPhotoUrl} />
