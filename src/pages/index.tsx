@@ -3,8 +3,8 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import styled, { createGlobalStyle } from 'styled-components';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import 'typeface-cutive-mono';
+import 'typeface-playfair-display';
 
 // Local imports
 import { Resume } from '../resume';
@@ -15,23 +15,21 @@ import { Footer } from '../components/footer';
 
 // Styled Components Global Styles
 export const GlobalStyle = createGlobalStyle`
-/* @import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Playfair+Display:400,700'); */
-
-/* TODO: GET RID OF TRANSITION JUMP ON RELOAD !!! */
-* {
-  box-sizing: border-box;  
-}
-html {
-  padding: 0;
-  margin: 0;
-}
-body {
-  font-family: 'Cutive Mono', monospace;
-  background: #fdfbf7;
-  transition: all 0.3s ease-in-out;
-  padding: 0;
-  margin: 0;
-}
+  /* TODO: GET RID OF TRANSITION JUMP ON RELOAD !!! */
+  * {
+    box-sizing: border-box;  
+  }
+  html {
+    padding: 0; 
+    margin: 0;
+  }
+  body {
+    font-family: 'Cutive Mono', monospace;
+    background: #fdfbf7;
+    transition: all 0.3s ease-in-out;
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 const BodyContainer = styled.div`

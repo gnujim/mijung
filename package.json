@@ -15,7 +15,6 @@
     "gatsby-plugin-react-helmet": "^3.0.5",
     "gatsby-plugin-styled-components": "^3.0.1",
     "gatsby-plugin-typescript": "^2.0.1",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-contentful": "^2.0.13",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
@@ -24,6 +23,8 @@
     "slick-carousel": "^1.8.1",
     "styled-components": "^4.0.3",
     "tslint": "^5.11.0",
+    "typeface-cutive-mono": "^0.0.54",
+    "typeface-playfair-display": "^0.0.54",
     "typescript": "^3.1.6"
   },
   "devDependencies": {
