@@ -19,7 +19,6 @@ const ResumeSidebarContainer = styled.div`
   font-size: 18px;
   justify-content: space-between;
   padding: 20px 15px 30px 15px;
-
   position: relative;
   @media (min-width: 577px) {
   }
@@ -61,6 +60,7 @@ const ResumeBio = styled.div`
   }
   @media (min-width: 890px) {
     margin: 50px 0;
+    font-size: 20px;
   }
   @media (min-width: 1035px) {
   }

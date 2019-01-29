@@ -28,7 +28,7 @@
     {
       "name": "Personal Site",
       "releaseDate": "2019.01",
-      "summary": "Solo project. A Gatsby site to showcase my portfolio, and learn GraphQL.",
+      "summary": "Solo project. A personal Gatsby site to explore using React with GraphQL and Typescript.",
       "website": "https://mijung.io",
       "githubUrl": "https://github.com/gnujim/mijung",
       "stack": "React | Typescript | Styled Components | GraphQL"
@@ -36,7 +36,7 @@
     {
       "name": "Developmental Milestones",
       "releaseDate": "2018.11",
-      "summary": "Solo project. A study tool for students based on the SNAPSHOTS DEVELOPMENTAL MILESTONES chart.",
+      "summary": "Solo project. A React Native app deployed to iOS App Store. It is a study tool for pediatrics medical students, based on the 'Snapshots Developmental Milestones' Chart.",
       "website": "https://itunes.apple.com/ca/app/developmental-milestones/id1439858858?mt=8",
       "githubUrl": "https://github.com/gnujim/milestones-app",
       "stack": "React Native | Typescript | Styled Components | Expo"
