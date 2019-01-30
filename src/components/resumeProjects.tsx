@@ -58,6 +58,13 @@ const SiteIcon = styled.img`
   margin-right: 5px;
 `;
 
+const ProjectStack = styled.div`
+  font-size: 16px;
+  @media (min-width: 577px) {
+    font-size: 18px;
+  }
+`;
+
 interface ResumeProjectsProps {
   projects: Array<ResumeProject>;
 }
@@ -94,7 +101,7 @@ export const ResumeProjects = (props: ResumeProjectsProps) => {
               )}
             </ProjectSites>
             <div>{project.summary}</div>
-            <div>{project.stack}</div>
+            <ProjectStack>{project.stack}</ProjectStack>
           </Project>
         );
       })}

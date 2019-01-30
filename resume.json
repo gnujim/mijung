@@ -5,7 +5,7 @@
     "label": "Web Developer",
     "phone": "16046167795",
     "github": "https://github.com/gnujim/",
-    "summary": "As a front-end developer with a keen eye for detail, I am committed to crafting an intuitive user experience, with the use of practical, well-encapsulated code. I am self-motivated, adept at problem solving, and an eager learner.",
+    "summary": "As a front-end developer with a keen eye for detail, I am committed to crafting an intuitive user experience, with the use of practical, well-encapsulated code. I am self-motivated, adept at problem solving, and an quick learner. ",
     "website": "https://mijung.io",
     "linkedin": "https://linkedin.com/in/gnujim",
     "location": "Vancouver, BC"
@@ -46,7 +46,7 @@
       "releaseDate": "2018.05",
       "summary": "Collaborative work project. Customized business site for client made at Pivot & Pilot.",
       "workUrl": "https://pivotandpilot.com/portfolio/soberlife/",
-      "stack": "Wordpress | jQuery"
+      "stack": "Wordpress | jQuery | PHP"
     },
     {
       "name": "DBS Developments",
@@ -54,7 +54,7 @@
       "summary": "Collaborative work project. Customized business site for client made at Pivot & Pilot.",
       "website": "https://dbsdevelopments.ca",
       "workUrl": "https://pivotandpilot.com/portfolio/dbs-developments-2/",
-      "stack": "Wordpress | jQuery"
+      "stack": "Wordpress | jQuery | PHP"
     },
     {
       "name": "Maria DeCotiis",
@@ -62,35 +62,28 @@
       "summary": "Collaborative work project. Customized business site for client made at Pivot & Pilot.",
       "website": "https://mariadecotiis.com",
       "workUrl": "https://pivotandpilot.com/portfolio/maria-decotiis/",
-      "stack": "Wordpress | jQuery | AJAX | PHP"
-    },
-    {
-      "name": "Pivot & Pilot - Contact Form",
-      "releaseDate": "2018.03",
-      "summary": "Maintenance and...",
-      "website": "https://pivotandpilot.com",
-      "stack": "Stuff"
+      "stack": "Wordpress | jQuery | PHP"
     },
     {
       "name": "Project Soul",
       "releaseDate": "2017.12/2018.01",
       "summary": "Collaborative work project. Customized business site for client made at Pivot & Pilot.",
       "workUrl": "https://pivotandpilot.com/portfolio/project-soul/",
-      "stack": "Wordpress | jQuery | AJAX | PHP"
+      "stack": "Wordpress | jQuery | PHP"
     },
     {
       "name": "Scoresheet",
       "releaseDate": "2017.11",
       "summary": "Collaborative final project. A web app that auto-calculates scores from board games using user-inputted values. Final project for Lighthouse Labs.",
       "githubUrl": "https://github.com/tasha-urbancic/scoresheet",
-      "stack": "React | SASS"
+      "stack": "React | Redux | Node | Express | Postgres | React-Router | Socket.io | SASS"
     },
     {
       "name": "Jungle",
       "releaseDate": "2017.10",
       "summary": "Solo assignment. A mini e-commerce app built with Ruby on Rails.",
       "githubUrl": "https://github.com/gnujim/jungle-rails",
-      "stack": "Ruby | Rails | ERB | ActiveRecord | PostgreSQL"
+      "stack": "Ruby | Rails | ERB | ActiveRecord | Postgres"
     },
     {
       "name": "Chatty App",
@@ -104,14 +97,14 @@
       "releaseDate": "2017.09",
       "summary": "Collaborative mid-term project. A 'Smart To Do List' that auto-categorizes items into the appropriate list, using keywords and APIs.",
       "githubUrl": "https://github.com/TuanPham303/smart-TODO-List",
-      "stack": "JS | HTML | Bootstrap | SASS | jQuery | Express | AJAX | NodeJS | EJS | Knex | PostgreSQL | Google Location Service API | Amazon Product API"
+      "stack": "jQuery | Express | AJAX | Node | EJS | Bootstrap | SASS | Knex | Postgres | Google Location Service API | Amazon Product API"
     },
     {
       "name": "Tweeter",
       "releaseDate": "2017.09",
       "summary": "Solo assignment. A single-page Twitter clone.",
       "githubUrl": "https://github.com/gnujim/tweeter",
-      "stack": "JS | HTML | CSS | jQuery | Express | AJAX | NodeJS | MongoDB"
+      "stack": "jQuery | Express | AJAX | Node | MongoDB"
     }
   ],
   "education": [
