@@ -16,5 +16,11 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-133426620-1',
+      },
+    },
   ],
 };
