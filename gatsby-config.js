@@ -20,7 +20,7 @@ module.exports = {
       resolve: `gatsby-plugin-gtag`,
       options: {
         trackingId: process.env.GOOGLE_TAG,
-        head: true,
+        head: false,
         anonymize: true,
       },
     },
