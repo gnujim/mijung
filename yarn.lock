@@ -5477,6 +5477,11 @@ gatsby-plugin-google-analytics@^2.0.12:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-gtag@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-gtag/-/gatsby-plugin-gtag-1.0.6.tgz#c1f4ab37bf731ec7a1c08ac34bf0ccaac79d5995"
+  integrity sha512-fPZ9GHolTkdoDKqwRG/E7bK7CAeVKsJTWnr4OU1uYG35LtKeFyPhFuEHlHyokfYT21snhWvNP2cNC/tANu/YGA==
+
 gatsby-plugin-page-creator@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.0.4.tgz#d35a8eb3483f06a388a3a188f2fe460d66c76cf6"
