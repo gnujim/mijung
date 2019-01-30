@@ -17,11 +17,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-gtag`,
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_TAG,
-        head: false,
-        anonymize: true,
+        head: true,
       },
     },
   ],
