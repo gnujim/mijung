@@ -17,12 +17,13 @@ const ResumeContainer = styled.div`
   @media print {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    margin: 0;
   }
-  @media (min-width: 890px) {
+  @media screen and (min-width: 890px) {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
-  @media (min-width: 1320px) {
+  @media screen and (min-width: 1320px) {
     margin: 30px auto;
   }
 `;
@@ -41,12 +42,23 @@ const HomeLink = styled(Link)`
     color: inherit;
     text-decoration: none;
   }
-  &:hover {
-    font-weight: 600;
+  @media print {
+    display: none;
   }
-  @media (min-width: 1320px) {
+  @media screen and (min-width: 890px) {
+    &:hover {
+      font-weight: 600;
+    }
+  }
+  @media screen and (min-width: 1320px) {
     left: calc((100vw - 1300px) / 2);
   }
+`;
+
+const HomeIcon = styled.img`
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
 `;
 
 interface ResumeQueryData {
@@ -129,7 +141,7 @@ export default () => (
           </Helmet>
           <GlobalStyle />
           <HomeLink to="/">
-            <img style={{ width: '15px', height: '15px', marginRight: '10px' }} src={homeIcon} />
+            <HomeIcon src={homeIcon} />
             Home
           </HomeLink>
           <ResumeContainer>

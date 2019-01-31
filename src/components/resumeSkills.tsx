@@ -10,6 +10,7 @@ const ResumeSkillsContainer = styled.div`
   margin-bottom: 20px;
   @media print {
     border: none;
+    margin: 0;
   }
 `;
 
@@ -22,6 +23,9 @@ const SkillsTitle = styled.div`
   font-size: 20px;
   font-style: italic;
   margin-bottom: 3px;
+  @media print {
+    font-size: 16px;
+  }
 `;
 
 const SkillsList = styled.div`

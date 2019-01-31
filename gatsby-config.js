@@ -16,12 +16,12 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN,
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: process.env.GOOGLE_TAG,
-        head: true,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: process.env.GOOGLE_TAG,
+    //     head: true,
+    //   },
+    // },
   ],
 };

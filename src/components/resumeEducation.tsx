@@ -8,6 +8,9 @@ const ResumeEducationContainer = styled.div`
   padding-bottom: 10px;
   border-bottom: 1px dashed #e3b5a5;
   margin-bottom: 20px;
+  @media print {
+    margin-bottom: 15px;
+  }
 `;
 
 const School = styled.div`
@@ -19,6 +22,9 @@ const SchoolHeader = styled.div`
   justify-content: space-between;
   margin-bottom: 3px;
   flex-direction: column;
+  @media print {
+    flex-direction: row;
+  }
   @media (min-width: 577px) {
     flex-direction: row;
   }
@@ -29,6 +35,9 @@ const SchoolName = styled.div`
   font-size: 20px;
   font-style: italic;
   /* margin-bottom: 15px; */
+  @media print {
+    font-size: 16px;
+  }
 `;
 
 interface ResumeEducationProps {

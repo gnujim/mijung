@@ -11,10 +11,21 @@ const ResumeProjectsContainer = styled.div`
   padding-bottom: 10px;
   border-bottom: 1px dashed #e3b5a5;
   margin-bottom: 20px;
+  @media print {
+    margin-bottom: 15px;
+  }
 `;
 
 const Project = styled.div`
   margin-bottom: 8px;
+  @media print {
+    &:nth-of-type(7) {
+      padding-bottom: 15px;
+    }
+    &:nth-of-type(8) {
+      padding-top: 45px;
+    }
+  }
 `;
 
 const ProjectHeader = styled.div`
@@ -22,8 +33,10 @@ const ProjectHeader = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 3px;
-  @media (min-width: 577px) {
+  @media print {
     flex-direction: row;
+  }
+  @media (min-width: 577px) {
   }
 `;
 
@@ -31,6 +44,9 @@ const ProjectName = styled.div`
   font-weight: 600;
   font-size: 20px;
   font-style: italic;
+  @media print {
+    font-size: 16px;
+  }
 `;
 
 const ProjectSites = styled.div`
@@ -60,6 +76,9 @@ const SiteIcon = styled.img`
 
 const ProjectStack = styled.div`
   font-size: 16px;
+  @media print {
+    font-size: 14px;
+  }
   @media (min-width: 577px) {
     font-size: 18px;
   }

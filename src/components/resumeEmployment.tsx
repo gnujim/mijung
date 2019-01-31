@@ -6,6 +6,9 @@ import { ResumeWork } from '../resume';
 const ResumeEmploymentContainer = styled.div`
   /* border: 1px dashed black; */
   margin-bottom: 20px;
+  @media print {
+    margin: 0;
+  }
 `;
 
 const Workplace = styled.div`
@@ -17,6 +20,9 @@ const WorkplaceHeader = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 3px;
+  @media print {
+    flex-direction: row;
+  }
   @media (min-width: 577px) {
     flex-direction: row;
   }
@@ -26,6 +32,9 @@ const WorkplaceName = styled.div`
   font-weight: 600;
   font-size: 20px;
   font-style: italic;
+  @media print {
+    font-size: 16px;
+  }
 `;
 
 const WorkPosition = styled.div`

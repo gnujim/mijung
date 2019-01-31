@@ -9,6 +9,7 @@ import mailIcon from '../../assets/my-icons-collection/png/email.png';
 import phoneIcon from '../../assets/my-icons-collection/png/phone.png';
 import locationIcon from '../../assets/my-icons-collection/png/003-pin.png';
 import angelIcon from '../../assets/AngelList_Black_Victory_Hand.png';
+import { ResumeEducation } from './resumeEducation';
 
 const ResumeSidebarContainer = styled.div`
   background-color: #fdfbf7;
@@ -20,6 +21,11 @@ const ResumeSidebarContainer = styled.div`
   justify-content: space-between;
   padding: 20px 15px 30px 15px;
   position: relative;
+  @media print {
+    font-size: 14px;
+    justify-content: flex-start;
+    padding: 25px 15px 0px 15px;
+  }
   @media (min-width: 577px) {
   }
   @media (min-width: 890px) {
@@ -45,6 +51,10 @@ const ResumeName = styled.div`
   line-height: 55px;
   font-weight: 700;
   margin-bottom: 20px;
+  @media print {
+    font-size: 45px;
+    line-height: 45px;
+  }
   @media (min-width: 577px) {
   }
   @media (min-width: 890px) {
@@ -56,41 +66,13 @@ const ResumeName = styled.div`
 const ResumeBio = styled.div`
   /* font-weight: 600; */
   margin: 25px 0;
-  @media (min-width: 577px) {
+  @media print {
+    font-size: 14px;
+    margin: 30px 0;
   }
   @media (min-width: 890px) {
     margin: 50px 0;
     font-size: 20px;
-  }
-  @media (min-width: 1035px) {
-  }
-`;
-
-// CHANGE THIS FOR PDF MEDIA QUERY
-const ResumeSidebarMiddle = styled.div`
-  display: none;
-  @media print {
-    /* display: block; */
-  }
-  @media (min-width: 577px) {
-  }
-  @media (min-width: 890px) {
-  }
-  @media (min-width: 1035px) {
-  }
-`;
-
-const ResumeSectionTitle = styled.div`
-  color: #444;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 40px;
-  margin-bottom: 15px;
-  @media (min-width: 577px) {
-  }
-  @media (min-width: 890px) {
-  }
-  @media (min-width: 1035px) {
   }
 `;
 
@@ -98,15 +80,12 @@ const ResumeSidebarBottom = styled.div`
   /* border: 1px dashed blue; */
   display: flex;
   @media print {
-    align-items: flex-end;
+    align-items: flex-start;
+    /* flex-grow: 1; */
   }
-  @media (min-width: 577px) {
-  }
-  @media (min-width: 890px) {
+  @media screen and (min-width: 890px) {
     align-items: flex-end;
     flex-grow: 1;
-  }
-  @media (min-width: 1035px) {
   }
 `;
 
@@ -120,7 +99,7 @@ const ResumeContact = styled.div`
   }
   @media (min-width: 577px) {
   }
-  @media (min-width: 890px) {
+  @media screen and (min-width: 890px) {
     flex-direction: column;
     left: 0;
     position: sticky;
@@ -138,15 +117,22 @@ const ResumeLink = styled.a`
   display: flex;
   margin: 2px 0;
   text-decoration: none;
-  &:visited {
-    color: #444;
+  &:nth-of-type(5) {
+    width: 25px;
+    height: 30px;
   }
-  &:hover {
-    font-weight: 600;
+  @media print {
+    color: #313131;
   }
   @media (min-width: 577px) {
+    &:visited {
+      color: #444;
+    }
   }
   @media (min-width: 890px) {
+    &:hover {
+      font-weight: 600;
+    }
   }
   @media (min-width: 1035px) {
   }
@@ -156,14 +142,16 @@ const ResumeIcon = styled.img`
   width: 25px;
   height: 25px;
   margin-right: 10px;
+  object-fit: contain;
   @media print {
+    width: 15px;
+    height: 16px;
   }
   @media (min-width: 577px) {
   }
-  @media (min-width: 890px) {
+  @media screen and (min-width: 890px) {
     width: 15px;
     height: 16px;
-    margin-right: 10px;
   }
   @media (min-width: 1035px) {
   }
@@ -176,7 +164,7 @@ const ResumeContactText = styled.div`
   }
   @media (min-width: 577px) {
   }
-  @media (min-width: 815px) {
+  @media screen and (min-width: 815px) {
     display: block;
   }
   @media (min-width: 1035px) {
@@ -189,11 +177,28 @@ const ResumeContactLocation = styled.div`
   }
   @media (min-width: 577px) {
   }
-  @media (min-width: 890px) {
+  @media screen and (min-width: 890px) {
     display: block;
   }
   @media (min-width: 1035px) {
   }
+`;
+
+const ResumeSidebarPrintOnly = styled.div`
+  display: none;
+  @media print {
+    display: block;
+    margin-top: 60px;
+  }
+`;
+
+const ResumeSectionTitle = styled.div`
+  color: #313131;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 25px;
+  font-size: 25px;
 `;
 
 interface ResumeSidebarProps {
@@ -209,11 +214,6 @@ export const ResumeSidebar = (props: ResumeSidebarProps) => {
         <ResumeName>{basics.name}</ResumeName>
         <ResumeBio>{basics.summary}</ResumeBio>
       </ResumeSidebarTop>
-
-      <ResumeSidebarMiddle>
-        <ResumeSectionTitle>Skills</ResumeSectionTitle>
-        <ResumeSkills skills={skills} />
-      </ResumeSidebarMiddle>
 
       <ResumeSidebarBottom>
         <ResumeContact>
@@ -234,10 +234,7 @@ export const ResumeSidebar = (props: ResumeSidebarProps) => {
             <ResumeContactText>gnujim</ResumeContactText>
           </ResumeLink>
           <ResumeLink href="https://angel.co/mij" target="_blank">
-            <ResumeIcon
-              style={{ height: '15px;', width: 'auto', marginRight: '15px' }}
-              src={angelIcon}
-            />
+            <ResumeIcon src={angelIcon} />
             <ResumeContactText>mij</ResumeContactText>
           </ResumeLink>
           <ResumeContactLocation>
@@ -246,6 +243,11 @@ export const ResumeSidebar = (props: ResumeSidebarProps) => {
           </ResumeContactLocation>
         </ResumeContact>
       </ResumeSidebarBottom>
+
+      <ResumeSidebarPrintOnly>
+        <ResumeSectionTitle>Skills</ResumeSectionTitle>
+        <ResumeSkills skills={skills} />
+      </ResumeSidebarPrintOnly>
     </ResumeSidebarContainer>
   );
 };
