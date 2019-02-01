@@ -130,6 +130,7 @@ export default () => (
         <>
           <Helmet>
             <title>Mij</title>
+            {/* <meta name="google-site-verification" content="xY_xDRGuASgUl11NHTxgxTlxx0F83MyUxIOUYBlZpNk" /> */}
           </Helmet>
           <GlobalStyle />
           <BodyContainer>
