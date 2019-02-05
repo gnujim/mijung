@@ -37,6 +37,7 @@ const ProjectHeader = styled.div`
     flex-direction: row;
   }
   @media (min-width: 577px) {
+    flex-direction: row;
   }
 `;
 
