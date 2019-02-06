@@ -13,7 +13,7 @@ const ResumeBodyContainer = styled.div`
   font-size: 18px;
   @media print {
     font-size: 14px;
-    padding: 10px 5px 5px 15px;
+    padding: 0px 5px 0px 15px;
   }
   @media (min-width: 890px) {
     padding: 15px 15px 10px 15px;
@@ -33,7 +33,7 @@ const ResumeSectionTitle = styled.div`
     color: #313131;
     font-size: 25px;
     line-height: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 `;
 

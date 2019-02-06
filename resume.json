@@ -5,7 +5,7 @@
     "label": "Web Developer",
     "phone": "16046167795",
     "github": "https://github.com/gnujim/",
-    "summary": "As a front-end developer with a keen eye for detail, I am committed to crafting an intuitive user experience, with the use of practical, well-encapsulated code. I am self-motivated, adept at problem solving, and an quick learner. ",
+    "summary": "As a developer with a keen eye for detail, I am committed to crafting an intuitive user experience, with the use of practical, well-encapsulated code. I am self-motivated, adept at problem solving, and an quick learner. ",
     "website": "https://mijung.io",
     "linkedin": "https://linkedin.com/in/gnujim",
     "location": "Vancouver, BC"
@@ -36,7 +36,7 @@
     {
       "name": "Developmental Milestones",
       "releaseDate": "2018.11",
-      "summary": "Solo project. A React Native app deployed to iOS App Store. It is a study tool for pediatrics medical students, based on the 'Snapshots Developmental Milestones' Chart.",
+      "summary": "Contract Work. A React Native app deployed to iOS App Store. It is a study tool for pediatrics medical students, based on the 'Snapshots Developmental Milestones' Chart.",
       "website": "https://itunes.apple.com/ca/app/developmental-milestones/id1439858858?mt=8",
       "githubUrl": "https://github.com/gnujim/milestones-app",
       "stack": "React Native | Typescript | Styled Components | Expo"
@@ -122,6 +122,13 @@
     }
   ],
   "work": [
+    {
+      "company": "Independent Contracter",
+      "summary": "I take on contract jobs, ranging from mobile apps to marketing websites. This includes overseeing full projects, from specification through implementation and delivery.",
+      "position": "Developer",
+      "startDate": "2018.06",
+      "endDate": "present"
+    },
     {
       "company": "Pivot & Pilot",
       "summary": "I was in charge of developing highly customized sites that were user-friendly for both the clients and their customer base. My responsibilities included researching and selecting an appropriate tech-stack, maintaining existing sites, and providing practical advice from a development standpoint. Working closely with the design team, I helped to deliver unique and beautiful products. ",
