@@ -1,12 +1,14 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site.
+# Personal Site
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
-```
+This is my personal website built with:
 
-Or [view the live demo here](https://gatsby-starter-hello-world-demo.netlify.com/).
+- [gatbsy](https://www.gatsbyjs.org/) ([react](https://reactjs.org/)/[graphql](https://graphql.org/))
+- [typescript](https://www.typescriptlang.org/)
+- [styled-components](https://www.styled-components.com/)
+- [contentful](https://www.contentful.com/)
 
-## Running in development
-`gatsby develop`
+## Steps to run locally:
+
+1. Clone this repo and `cd` into
+2. Run `yarn` (or `npm install`)
+3. Run `yarn start`
