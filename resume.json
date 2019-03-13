@@ -21,14 +21,22 @@
     },
     {
       "title": "Databases",
-      "skills": "Postgres | MongoDB"
+      "skills": "Postgres | MongoDB | MySQL"
     }
   ],
   "projects": [
     {
+      "name": "Bookery.io",
+      "releaseDate": "2019",
+      "summary": "Collaborative work project. Bookery.io is a booking software currently in development.",
+      "website": "https://bookery.io/",
+      "githubUrl": "",
+      "stack": "React | Typescript | Styled Components | Formik | GraphQL | Apollo | Firebase"
+    },
+    {
       "name": "Personal Site",
       "releaseDate": "2019.01",
-      "summary": "Solo project. A personal Gatsby site to explore using React with GraphQL and Typescript.",
+      "summary": "Solo project. A personal Gatsby site to explore using React with GraphQL and Typescript, and Contentful as a CMS.",
       "website": "https://mijung.io",
       "githubUrl": "https://github.com/gnujim/mijung",
       "stack": "React | Typescript | Styled Components | GraphQL"
@@ -98,13 +106,6 @@
       "summary": "Collaborative mid-term project. A 'Smart To Do List' that auto-categorizes items into the appropriate list, using keywords and APIs.",
       "githubUrl": "https://github.com/TuanPham303/smart-TODO-List",
       "stack": "jQuery | Express | AJAX | Node | EJS | Bootstrap | SASS | Knex | Postgres | Google Location Service API | Amazon Product API"
-    },
-    {
-      "name": "Tweeter",
-      "releaseDate": "2017.09",
-      "summary": "Solo assignment. A single-page Twitter clone.",
-      "githubUrl": "https://github.com/gnujim/tweeter",
-      "stack": "jQuery | Express | AJAX | Node | MongoDB"
     }
   ],
   "education": [
@@ -123,6 +124,13 @@
   ],
   "work": [
     {
+      "company": "SocsDog Co-op",
+      "summary": "I work alongside a small team for an up-and-coming booking software product. I am responsible for developing vital workflows such as onboarding and the main appointment booking form.",
+      "position": "Junior Front-End Developer",
+      "startDate": "2019.01",
+      "endDate": "present"
+    },
+    {
       "company": "Independent Contracter",
       "summary": "I take on contract jobs, ranging from mobile apps to marketing websites. This includes overseeing full projects, from specification through implementation and delivery.",
       "position": "Developer",
@@ -139,7 +147,7 @@
     },
     {
       "company": "Scotiabank",
-      "summary": "Along with helping customers with a broad array of services and training new employees, I was in charge of the handling and record keeping of the treasury. This required paying close attention to minute details to complete complex tasks involving large sums of money, without error. There were many instances of high stress circumstances, where I had to quickly find efficient solutions to solve the problem at hand.",
+      "summary": "Along with helping customers and training new employees, I was in charge of the handling and record keeping of the treasury. This required paying close attention to minute details to complete complex tasks involving large sums of money, without error. There were many instances of high stress circumstances, where I had to quickly find efficient solutions to solve the problem at hand.",
       "position": "CSR",
       "startDate": "2014.09",
       "endDate": "2017.09"

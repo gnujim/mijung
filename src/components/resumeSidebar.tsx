@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 import { Resume } from '../resume';
 import { ResumeSkills } from '../components/resumeSkills';
+import { ResumeEducation } from './resumeEducation';
 import githubIcon from '../../assets/my-icons-collection/png/001-github.png';
 import linkedinIcon from '../../assets/my-icons-collection/png/linkedin.png';
 import mailIcon from '../../assets/my-icons-collection/png/email.png';
 import phoneIcon from '../../assets/my-icons-collection/png/phone.png';
 import locationIcon from '../../assets/my-icons-collection/png/003-pin.png';
 import angelIcon from '../../assets/AngelList_Black_Victory_Hand.png';
-import { ResumeEducation } from './resumeEducation';
 
 const ResumeSidebarContainer = styled.div`
   background-color: #fdfbf7;
@@ -68,7 +68,7 @@ const ResumeBio = styled.div`
   margin: 25px 0;
   @media print {
     font-size: 14px;
-    margin: 30px 0;
+    margin: 40px 0 45px 0;
   }
   @media (min-width: 890px) {
     margin: 50px 0;
@@ -188,7 +188,7 @@ const ResumeSidebarPrintOnly = styled.div`
   display: none;
   @media print {
     display: block;
-    margin-top: 60px;
+    margin-top: 515px;
   }
 `;
 
@@ -197,8 +197,8 @@ const ResumeSectionTitle = styled.div`
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   margin-bottom: 10px;
-  line-height: 25px;
-  font-size: 25px;
+  line-height: 21px;
+  font-size: 21px;
 `;
 
 interface ResumeSidebarProps {
@@ -207,7 +207,7 @@ interface ResumeSidebarProps {
 
 export const ResumeSidebar = (props: ResumeSidebarProps) => {
   const { resume } = props;
-  const { basics, skills } = resume;
+  const { basics, skills, education } = resume;
   return (
     <ResumeSidebarContainer>
       <ResumeSidebarTop>
@@ -247,6 +247,8 @@ export const ResumeSidebar = (props: ResumeSidebarProps) => {
       <ResumeSidebarPrintOnly>
         <ResumeSectionTitle>Skills</ResumeSectionTitle>
         <ResumeSkills skills={skills} />
+        <ResumeSectionTitle>Education</ResumeSectionTitle>
+        <ResumeEducation education={education} />
       </ResumeSidebarPrintOnly>
     </ResumeSidebarContainer>
   );

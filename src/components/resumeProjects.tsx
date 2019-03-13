@@ -13,18 +13,17 @@ const ResumeProjectsContainer = styled.div`
   margin-bottom: 20px;
   @media print {
     padding-bottom: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0;
+    border-bottom: none;
   }
 `;
 
 const Project = styled.div`
   margin-bottom: 8px;
   @media print {
-    &:nth-of-type(7) {
-      /* padding-bottom: 15px; */
-    }
-    &:nth-of-type(8) {
-      /* padding-top: 45px; */
+    margin-bottom: 5px;
+    &:nth-of-type(3) {
+      padding-top: 5px;
     }
   }
 `;

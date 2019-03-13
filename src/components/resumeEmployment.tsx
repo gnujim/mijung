@@ -7,12 +7,17 @@ const ResumeEmploymentContainer = styled.div`
   /* border: 1px dashed black; */
   margin-bottom: 20px;
   @media print {
-    margin: 0;
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+    border-bottom: 1px dashed #e3b5a5;
   }
 `;
 
 const Workplace = styled.div`
   margin-bottom: 8px;
+  @media print {
+    margin-bottom: 5px;
+  }
 `;
 
 const WorkplaceHeader = styled.div`

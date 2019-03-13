@@ -14,6 +14,8 @@ const ResumeBodyContainer = styled.div`
   @media print {
     font-size: 14px;
     padding: 0px 5px 0px 15px;
+    margin-top: 5px;
+    /* margin-bottom: 20px; */
   }
   @media (min-width: 890px) {
     padding: 15px 15px 10px 15px;
@@ -31,9 +33,9 @@ const ResumeSectionTitle = styled.div`
   margin-bottom: 15px;
   @media print {
     color: #313131;
-    font-size: 25px;
-    line-height: 25px;
-    margin-bottom: 5px;
+    font-size: 21px;
+    line-height: 21px;
+    margin-bottom: 8px;
   }
 `;
 
@@ -62,19 +64,19 @@ export const ResumeBody = (props: ResumeBodyProps) => {
       <ForScreenOnly>
         <ResumeSectionTitle>Skills</ResumeSectionTitle>
         <ResumeSkills skills={skills} />
+        <ResumeSectionTitle>Projects</ResumeSectionTitle>
+        <ResumeProjects projects={projects} />
+        <ResumeSectionTitle>Education</ResumeSectionTitle>
+        <ResumeEducation education={education} />
+        <ResumeSectionTitle>Employment</ResumeSectionTitle>
+        <ResumeEmployment work={work} />
       </ForScreenOnly>
       <ForPrintOnly>
-        <ResumeSectionTitle>Education</ResumeSectionTitle>
-        <ResumeEducation education={education} />
+        <ResumeSectionTitle>Employment</ResumeSectionTitle>
+        <ResumeEmployment work={work} />
+        <ResumeSectionTitle>Projects</ResumeSectionTitle>
+        <ResumeProjects projects={projects} />
       </ForPrintOnly>
-      <ResumeSectionTitle>Projects</ResumeSectionTitle>
-      <ResumeProjects projects={projects} />
-      <ForScreenOnly>
-        <ResumeSectionTitle>Education</ResumeSectionTitle>
-        <ResumeEducation education={education} />
-      </ForScreenOnly>
-      <ResumeSectionTitle>Employment</ResumeSectionTitle>
-      <ResumeEmployment work={work} />
     </ResumeBodyContainer>
   );
 };

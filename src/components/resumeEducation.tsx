@@ -10,7 +10,8 @@ const ResumeEducationContainer = styled.div`
   margin-bottom: 20px;
   @media print {
     padding-bottom: 0;
-    margin-bottom: 5px;
+    margin-bottom: 0;
+    border-bottom: none;
   }
 `;
 

@@ -69,15 +69,6 @@ interface ResumeQueryData {
       };
     }>;
   };
-  // allContentfulAbout: {
-  //   edges: Array<{
-  //     node: {
-  //       aboutText: {
-  //         aboutText: string;
-  //       };
-  //     };
-  //   }>;
-  // };
 }
 
 const query = graphql`
