@@ -28,10 +28,10 @@
     {
       "name": "Bookery.io",
       "releaseDate": "2019",
-      "summary": "Collaborative work project. Bookery.io is a booking software currently in development.",
+      "summary": "Collaborative work project. Bookery.io is an appointment management app currently in development.",
       "website": "https://bookery.io/",
       "githubUrl": "",
-      "stack": "React | Typescript | Styled Components | Formik | GraphQL | Apollo | Firebase"
+      "stack": "React | React Native | Typescript | Styled Components | Formik | GraphQL | Apollo | Firebase"
     },
     {
       "name": "Personal Site",
